@@ -1,0 +1,17 @@
+.introduction {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.introduction-content {
+    width: 400px;
+}
+.introduction-content-title {
+    color: #106a39;
+}
+.introduction-content p {
+    text-align: justify;
+}
+.introduction-images {
+    margin-left: 20px;
+}
