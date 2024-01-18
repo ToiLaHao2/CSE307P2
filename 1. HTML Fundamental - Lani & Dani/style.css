@@ -12,17 +12,19 @@ header {
     height: 50px;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 40px;
+    border: 1px solid black;
 }
 
 .menu {
     list-style-type: none;
     text-decoration: none;
+    border: 1px solid black;
 }
 
 .menu > li {
     display: inline-block;
-    width: auto;
+    border: 1px solid black;
 }
 
 .menu > li:hover {
