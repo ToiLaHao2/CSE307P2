@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Registration form</title>
+    </head>
+    <body>
+        <form action="">
+            <table border="1" style="width: 500px">
+                <colgroup>
+                    <col style="width: 40%" />
+                    <col style="width: 60%" />
+                </colgroup>
+                <tr>
+                    <td>
+                        <label for="fullname"><b>Full name*</b></label>
+                    </td>
+                    <td>
+                        <input
+                            type="text"
+                            id="fullname"
+                            name="fullname"
+                            placeholder="Giàu"
+                            style="width: 98%"
+                            required
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email"><b>Email*</b></label>
+                    </td>
+                    <td>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="giau.ung@eiu.edu.vn"
+                            style="width: 98%"
+                            required
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password"><b>Password*</b></label>
+                    </td>
+                    <td>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="................"
+                            style="width: 98%"
+                            required
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="confPassword"
+                            ><b>Confirm Password*</b></label
+                        >
+                    </td>
+                    <td>
+                        <input
+                            type="password"
+                            id="confPassword"
+                            placeholder="................"
+                            style="width: 98%"
+                            required
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="phone"><b>Phone number*</b></label>
+                    </td>
+                    <td>
+                        <input
+                            type="number"
+                            id="phone"
+                            name="phone"
+                            placeholder="0909456789"
+                            style="width: 98%"
+                            required
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="address"><b>Address</b></label>
+                    </td>
+                    <td>
+                        <textarea
+                            name="address"
+                            id="address"
+                            rows="3"
+                            placeholder="Room 414.B11, School of CIT, EIU"
+                            style="width: 80%"
+                        ></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="city"><b>City</b></label>
+                    </td>
+                    <td>
+                        <input
+                            type="text"
+                            id="city"
+                            name="city"
+                            placeholder="Enter your city"
+                            style="width: 150px"
+                        />
+                        <label for="state"><b>State</b></label>
+                        <input
+                            type="text"
+                            id="state"
+                            name="state"
+                            placeholder="Enter your state"
+                            style="width: 150px"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="zipPostalCode">
+                            <b>Zip/Postal Code</b>
+                        </label>
+                    </td>
+                    <td>
+                        <input
+                            type="text"
+                            id="zipPostalCode"
+                            name="zipPostalCode"
+                            placeholder="Enter your Zip/Postal Code"
+                            style="width: 98%"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="country"><b>Country</b></label>
+                    </td>
+                    <td>
+                        <select name="country" id="country">
+                            <option value="unselect" selected="unselect">
+                                [Select your country]
+                            </option>
+                            <option value="Vietnam">Vietnam</option>
+                            <option value="America">America</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="birthday"><b>Birthday</b></label>
+                    </td>
+                    <td>
+                        <input
+                            type="date"
+                            id="birthday"
+                            name="birthday"
+                            style="width: 98%"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="gender"><b>Gender</b></label>
+                    </td>
+                    <td>
+                        <select name="gender" id="gender">
+                            <option value="male" selected="selected">
+                                Male
+                            </option>
+                            <option value="female">Female</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="startingDate"><b>Starting date</b></label>
+                    </td>
+                    <td>
+                        <input
+                            type="radio"
+                            name="startingDate"
+                            value="Spring"
+                        />Spring
+                        <input
+                            type="radio"
+                            name="startingDate"
+                            id="Summer"
+                        />Summer
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="comment"><b>Comment</b></label>
+                    </td>
+                    <td>
+                        <textarea
+                            name="comment"
+                            id="comment"
+                            rows="3"
+                            placeholder="Please send us more information"
+                            style="width: 80%"
+                        ></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center">
+                        <input type="reset" />
+                        <input type="submit" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

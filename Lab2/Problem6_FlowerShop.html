@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flower Shop</title>
+        <link rel="stylesheet" href="vow.min.css" type="text/css" />
+    </head>
+    <body>
+        <div style="padding: 60px">
+            <h1>TÀI KHOẢN CỦA BẠN</h1>
+            <div style="margin-left: 80px;">
+                <button>QUẢN LÝ TÀI KHOẢN</button>
+                <button>QUẢN LÝ ĐƠN HÀNG</button>
+                <button>THAY ĐỔI MẬT KHẨU</button>
+            </div>
+            <p>
+                Bạn có thể cập nhật lại thông tin của mình tại các trường dưới
+                đây
+            </p>
+            <p>Lưu ý: Những trường hợp có dấu "*" là bắt buộc</p>
+            <form action="">
+                <table style="width: 700px" cellpadding="5px">
+                    <colgroup>
+                        <col style="width: 50%" />
+                        <col style="width: 50%" />
+                    </colgroup>
+                    <tr>
+                        <td>
+                            <label for="name"><b>Họ và tên *</b></label>
+                        </td>
+                        <td>
+                            <label for="birthday"><b>Ngày sinh</b></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                required
+                                placeholder="Nguyễn Văn A"
+                                style="width: 90%; padding: 10px"
+                            />
+                        </td>
+                        <td>
+                            <input
+                                type="date"
+                                id="text"
+                                name="birthday"
+                                style="width: 90%; padding: 10px"
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="city"><b>Tỉnh - Thành phố *</b></label>
+                        </td>
+                        <td>
+                            <label for="company"><b>Công ty</b></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input
+                                type="text"
+                                id="city"
+                                name="city"
+                                required
+                                placeholder="TP. Hồ Chí Minh"
+                                style="width: 90%; padding: 10px"
+                            />
+                        </td>
+                        <td>
+                            <input
+                                type="text"
+                                id="company"
+                                name="company"
+                                placeholder="Công ty của bạn"
+                                style="width: 90%; padding: 10px"
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="province"><b>Quận - Huyện*</b></label>
+                        </td>
+                        <td>
+                            <label for="position"><b>Chức vụ</b></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input
+                                type="text"
+                                id="province"
+                                name="province"
+                                required
+                                placeholder="Quận 5"
+                                style="width: 90%; padding: 10px"
+                            />
+                        </td>
+                        <td>
+                            <input
+                                type="text"
+                                id="position"
+                                name="position"
+                                placeholder="Chức vụ tại công ty"
+                                style="width: 90%; padding: 10px"
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="address"><b>Địa chỉ *</b></label>
+                        </td>
+                        <td>
+                            <label for="favorFlower">
+                                <b>Bạn thích Loại hoa</b>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input
+                                type="text"
+                                id="address"
+                                name="address"
+                                placeholder="271/2 An Dương Vương, Phường 3, Quận 5, TP. Hồ Chí.."
+                                required
+                                style="width: 90%; padding: 10px"
+                            />
+                        </td>
+                        <td>
+                            <input
+                                type="text"
+                                id="favorFlower"
+                                name="favorFlower"
+                                placeholder="Hoa hồng, Hoa lan..."
+                                style="width: 90%; padding: 10px"
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="phone"><b>Số điện thoại *</b></label>
+                        </td>
+                        <td>
+                            <label for="flowerColor">
+                                <b>Bạn thích màu hoa</b>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input
+                                type="number"
+                                id="phone"
+                                name="phone"
+                                placeholder="0973 371 346"
+                                required
+                                style="width: 90%; padding: 10px"
+                            />
+                        </td>
+                        <td>
+                            <input
+                                type="text"
+                                id="flowerColor"
+                                name="flowerColor"
+                                placeholder="Màu đỏ, Màu tím,..."
+                                style="width: 90%; padding: 10px"
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email"><b>Email *</b></label>
+                        </td>
+                        <td>
+                            <label for="styleDesign"
+                                ><b>Phong các cắm hoa</b></label
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                                placeholder="nguyenvana@gmail.com"
+                                style="width: 90%; padding: 10px"
+                            />
+                        </td>
+                        <td>
+                            <input
+                                type="text"
+                                id="styleDesign"
+                                name="styleDesign"
+                                placeholder="Cổ điển, Hiện đại, Đơn giản, Dễ thương..."
+                                style="width: 90%; padding: 10px"
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center">
+                            <button type="submit" style="padding: 10px">
+                                CẬP NHẬT THÔNG TIN
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
