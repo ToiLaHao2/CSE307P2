@@ -62,3 +62,8 @@
     text-decoration: none;
     color: black;
 }
+
+/* footer */
+.footer {
+    border: 1px solid black;
+}
