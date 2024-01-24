@@ -1,0 +1,64 @@
+.top-header {
+    text-align: center;
+    background-color: #222222;
+    color: #d3d3d3;
+    font-size: 12px;
+    padding: 5px;
+    padding-bottom: 0px;
+    overflow: hidden;
+    height: 30px;
+}
+
+.top-header-address {
+    width: 60%;
+    text-align: left;
+}
+
+.address-info {
+    list-style-type: none;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+}
+
+.address-info li a {
+    text-decoration: none;
+    color: #d3d3d3;
+}
+
+.top-header-contact {
+    width: 40%;
+    text-align: right;
+}
+
+.address-info li {
+    margin-left: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+    padding: 0px;
+}
+
+.header-logo {
+    text-align: center;
+    padding: 20px;
+}
+
+.header-menu {
+    text-align: center;
+}
+
+.menu {
+    list-style-type: none;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    padding: 10px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+}
