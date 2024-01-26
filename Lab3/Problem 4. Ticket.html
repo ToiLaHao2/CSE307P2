@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Problem 4 - Ticket CSS</title>
+        <meta charset="utf-8" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <style type="text/css">
+            .container {
+                width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+                border: 2px solid #ccc;
+                padding: 10px;
+                background-color: #eee;
+            }
+            td {
+                vertical-align: top;
+            }
+            /* Your style */
+            .ticket-id {
+                color: #666666;
+            }
+            .title {
+                font-weight: bold;
+                font-style: italic;
+            }
+            .information {
+                color: #9570fa;
+            }
+            .status {
+                color: red;
+                font-weight: 1000;
+            }
+            .other-info {
+                color: #666666;
+            }
+            .state {
+                color: #f69139;
+                font-weight: 900;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <!-- Your code -->
+            <p class="ticket-id"><b>Ticket ID: </b>123456789</p>
+            <table>
+                <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: 270px" />
+                </colgroup>
+                <!-- Your code -->
+                <tr>
+                    <td class="title">Name</td>
+                    <td rowspan="2" class="information">
+                        <i class="fa-solid fa-circle" style="color: green"></i>
+                        Parker Tom<br /><span class="status"
+                            >No Active Support</span
+                        >
+                    </td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td class="title">Email</td>
+                    <td class="information">tom@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="title">Response Time</td>
+                    <td class="other-info">72 hours, 60 hours left</td>
+                </tr>
+                <tr>
+                    <td class="title">Last Action</td>
+                    <td rowspan="2" class="other-info">
+                        Never been locked <br /><span class="information"
+                            >Link to public post</span
+                        >
+                    </td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td class="title">Status</td>
+                    <td class="state">Not answered</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Problem 2</title>
+        <style>
+            .header {
+                display: flex;
+                margin: 0;
+                padding: 0;
+            }
+            .logo {
+                margin-right: 20px;
+                padding: 0;
+            }
+            .welcome {
+                padding: 0;
+            }
+            .list-nav li a {
+                text-decoration: none;
+                color: black;
+            }
+            .list-nav li a:hover {
+                color: white;
+                background-color: blue;
+            }
+            .info-table {
+                text-align: center;
+            }
+            .info-table,
+            th,
+            td {
+                border: 2px solid black;
+                border-collapse: collapse;
+            }
+            .info-table tbody tr td:nth-child(1) {
+                background-color: green;
+            }
+            .info-table tbody tr td:nth-child(2) {
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="logo">Logo</h1>
+            <span><h1 class="welcome">Welcome to Our Web Site</h1></span>
+        </header>
+        <nav>
+            <ul class="list-nav">
+                <li><a href="#home">Nav item 1</a></li>
+                <li><a href="#home">Nav item 2</a></li>
+                <li><a href="#home">Nav item 3</a></li>
+                <li><a href="#home">Nav item 4</a></li>
+            </ul>
+        </nav>
+        <main>
+            <table class="info-table" cellpadding="5px">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ivan</td>
+                        <td>Ivanov</td>
+                        <td>4.54</td>
+                    </tr>
+                    <tr>
+                        <td>Petar</td>
+                        <td>Petrov</td>
+                        <td>4.31</td>
+                    </tr>
+                    <tr>
+                        <td>Kiro</td>
+                        <td>Kirov</td>
+                        <td>4.62</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </body>
+</html>
