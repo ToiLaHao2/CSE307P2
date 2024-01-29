@@ -5,6 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Problem 8</title>
         <style>
+            .background img {
+                width: 100%;
+                width: 120%;
+                background-color: rgba(130, 134, 129, 0.2);
+                position: relative;
+            }
+            .contact {
+                position: absolute;
+                width: 50%;
+                top: 0%;
+                right: 20%;
+            }
             .image-layer {
                 margin-left: auto;
                 margin-right: auto;
@@ -13,19 +25,43 @@
             .information {
                 text-align: center;
             }
-            .description {
-                padding: 10px;
-                border: 1px solid #bbb;
-                background-color: #bbb;
+            .information h1 {
+                color: aliceblue;
             }
-            .basic-infor {
-                border: ;
+            .description {
+                padding: 16px;
+                border: 1px solid rgba(130, 134, 129, 0.2);
+                background-color: rgba(130, 134, 129, 0.2);
+            }
+            .basic-infor td div {
+                padding: 15px;
+                background-color: rgba(130, 134, 129, 0.2);
+            }
+            .basic-infor td div input {
+                border: none;
+                background-color: rgba(130, 134, 129, 0.2);
+                width: 80%;
+            }
+            .basic-infor td div textarea {
+                border: none;
+                background-color: rgba(130, 134, 129, 0.2);
+            }
+            .button-submit {
+                color: aliceblue;
+                width: 80px;
+                height: 30px;
+                background-color: #262628;
+                border-radius: 10%;
+                border: 1px solid white;
             }
         </style>
     </head>
     <body>
         <div class="image-layer">
-            <div>
+            <div class="background">
+                <img src="background.jpg" alt="" />
+            </div>
+            <div class="contact">
                 <div class="information">
                     <h1>Contact Form</h1>
                     <p class="description">
@@ -34,46 +70,73 @@
                         swirling in Millie's stomach. Inside, the air hummed
                         with the low murmur of late-night conversations and the
                         rhythmic sizzle of greasy spoons meeting sizzling
-                        onions. A lone wolfhound, abandoned at the bar,
-                        whimpered, its mournful tune competing with the off-key
-                        Elvis rendition emanating from the jukebox. Clutching a
-                        worn photograph, Millie slid into a red vinyl booth, its
-                        springs groaning with the weight of countless stories
-                        untold. Tonight, she hoped to add hers.
                     </p>
                 </div>
                 <form action="" class="basic-infor">
-                    <table>
+                    <table cellpadding="10px">
+                        <colgroup>
+                            <col style="width: 50%" />
+                            <col style="width: 50%" />
+                        </colgroup>
                         <tr>
                             <td>
-                                <label for="name">Name:</label>
-                                <input type="text" id="name" name="name" />
+                                <div>
+                                    <label for="name" class="title"
+                                        >Name:</label
+                                    >
+                                    <input type="text" id="name" name="name" />
+                                </div>
                             </td>
                             <td rowspan="3">
-                                <label for="message"
-                                    >Your message here ...</label
-                                >
-                                <textarea
-                                    name="message"
-                                    id="message"
-                                    cols="30"
-                                    rows="10"
-                                ></textarea>
+                                <div>
+                                    <label for="message" class="title"
+                                        >Your message here ...</label
+                                    >
+                                    <textarea
+                                        class="box"
+                                        name="message"
+                                        id="message"
+                                        cols="45"
+                                        rows="9"
+                                    ></textarea>
+                                </div>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <label for="email">Email:</label>
-                                <input type="text" id="email" name="email" />
+                                <div>
+                                    <label for="email" class="title"
+                                        >Email:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="email"
+                                        name="email"
+                                    />
+                                </div>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <label for="subject">Subject:</label>
+                                <div>
+                                    <label for="subject" class="title"
+                                        >Subject:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="subject"
+                                        name="subject"
+                                    />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
                                 <input
-                                    type="text"
-                                    id="subject"
-                                    name="subject"
+                                    type="submit"
+                                    value="Send"
+                                    class="button-submit"
                                 />
                             </td>
                         </tr>
