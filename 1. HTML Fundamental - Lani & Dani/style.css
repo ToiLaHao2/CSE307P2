@@ -81,17 +81,19 @@ header {
 }
 
 .service {
-    width: 33%;
+    width: 30%;
     border: 1px solid #eee;
     box-shadow: 0 0 20px #bbb;
-    margin: 20px;
+    margin-bottom: 30px;
     position: relative;
 }
 
 .service-group {
     display: flex;
-    margin-left: 10%;
-    margin-right: 10%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 .sub-title-2 {
@@ -101,10 +103,10 @@ header {
 }
 
 .service-2 {
-    width: 25%;
+    width: 23%;
     border: 1px solid #eee;
     box-shadow: 0px 2px #bbb;
-    margin: 20px;
+    margin-bottom: 30px;
     padding: 30px 30px 70px 30px;
 }
 
@@ -121,4 +123,16 @@ header {
     top: 25%;
     right: 40%;
     border: 1px solid black;
+}
+
+.on-top-button {
+    color: aliceblue;
+    background-color: green;
+    width: 50px;
+    padding: 15px;
+    border-radius: 50%;
+    text-align: center;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
 }
