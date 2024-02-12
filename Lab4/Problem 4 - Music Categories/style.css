@@ -1,0 +1,53 @@
+.music-section {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 400px;
+    background-color: #eee;
+    border-radius: 4px;
+}
+.title {
+    font-weight: 100;
+    font-size: 20px;
+    padding: 10px;
+    margin: 0;
+}
+.music-box {
+    display: flex;
+    margin-top: 30px;
+    padding: 10px;
+    max-width: 100%;
+    border: 2px solid #ccc;
+    background-color: white;
+}
+.music-image {
+    max-width: 40%;
+    border: 1px solid #ccc;
+}
+.description {
+    margin-left: 10px;
+    margin-top: 0;
+    max-width: 100%;
+}
+.web-link {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+.button-group {
+    text-align: right;
+}
+.listen-button {
+    border: none;
+    width: 70px;
+    height: 20px;
+    color: aliceblue;
+    background-image: url("listen.png");
+}
+.add-button {
+    border: none;
+    width: 70px;
+    height: 20px;
+    color: aliceblue;
+    background-image: url("add.png");
+}

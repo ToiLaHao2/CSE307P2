@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Problem 2</title>
+    </head>
+    <style>
+        .menu {
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px;
+            width: 200px;
+        }
+        .list {
+            border: 1px solid #bbb;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        .directory {
+            padding: 10px;
+            border-top: 1px dotted #bbb;
+        }
+        .directory:hover {
+            .sublist {
+                display: block;
+            }
+        }
+        .sublist {
+            display: none;
+            list-style-type: none;
+        }
+        .sublist li {
+            padding: 5px;
+        }
+    </style>
+    <body>
+        <div class="menu">
+            <ul class="list">
+                <li class="directory">
+                    Cellphone
+                    <ul class="sublist">
+                        <li>Samsung</li>
+                        <li>iPhone</li>
+                        <li>LG</li>
+                        <li>Oppo</li>
+                        <li>Xiaomi</li>
+                    </ul>
+                </li>
+                <li class="directory">
+                    Smart Watch
+                    <ul class="sublist">
+                        <li>Samsung</li>
+                        <li>iPhone</li>
+                        <li>LG</li>
+                        <li>Oppo</li>
+                        <li>Xiaomi</li>
+                    </ul>
+                </li>
+                <li class="directory">
+                    Laptop
+                    <ul class="sublist">
+                        <li>Samsung</li>
+                        <li>iPhone</li>
+                        <li>LG</li>
+                        <li>Oppo</li>
+                        <li>Xiaomi</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
