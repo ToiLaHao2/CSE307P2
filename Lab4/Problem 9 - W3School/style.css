@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-section {
+    width: 15%;
+}
+
+.logo {
+    margin: 10px;
+}
+
+.menu {
+    margin-left: 0;
+    list-style-type: none;
+}
+
+.menu-option {
+    margin: 10px;
+}
+
+.menu-title {
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.menu-title a {
+    color: red;
+    text-decoration: none;
+}
+
+.sub-menu {
+    margin-left: 0;
+    list-style-type: none;
+}
+
+.sub-menu li a {
+    text-decoration: none;
+    color: black;
+}
+
+.main-screen {
+    margin: 5px;
+    width: 70%;
+    border: 2px solid #b4b4b4;
+    padding: 10px;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.button-group {
+    margin-top: 5px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #b4b4b4;
+}
+
+.button-group button {
+    width: 10%;
+    background-color: aliceblue;
+    padding: 2px;
+}
+
+.previous:before {
+    font-family: "fontawesome";
+    content: "\f0d9";
+}
+.next:after {
+    font-family: "fontawesome";
+    content: "\f0da";
+}
+
+.content {
+    padding-bottom: 5px;
+    border-bottom: 2px solid #b4b4b4;
+}
+
+.part {
+    padding-top: 5px;
+}
+
+.content-title {
+    padding-left: 5px;
+    margin-bottom: 10px;
+    color: aliceblue;
+    background-color: #b4b4b4;
+}
+
+p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.short-link {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.site-bar {
+    width: 11%;
+    text-align: center;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.site-search {
+    padding-left: 5px;
+    margin-bottom: 10px;
+    color: aliceblue;
+    background-color: #b4b4b4;
+}
+
+.small-part {
+    margin: 5px;
+    border: 2px solid #b4b4b4;
+}
+
+.small-part input {
+    width: 60%;
+    margin-right: 5px;
+}
+
+.link-button {
+    margin: 5px;
+    padding: 5px;
+    width: 70%;
+    background-color: #c1e7fa;
+    border: 1px solid blue;
+    color: #66d6fe;
+}
