@@ -40,10 +40,12 @@
 
 .header-logo {
     text-align: center;
-    padding: 20px;
+    padding: 40px;
+    border-bottom: 1px solid #f5f5f5;
 }
 
 .header-menu {
+    padding: 10px;
     text-align: center;
 }
 
@@ -54,17 +56,63 @@
     padding: 0;
 }
 
-.menu li {
+.menu-option {
     padding: 10px;
+    position: relative;
 }
 
-.menu li a {
+.menu-option a {
     text-decoration: none;
     color: black;
+}
+
+.menu-option a:hover {
+    font-weight: bold;
+}
+
+.sub-menu {
+    width: 100%;
+    display: none;
+    text-align: left;
+    list-style-type: none;
+    left: 0;
+    top: 100%;
+}
+
+.menu-option:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu-opt {
+    padding: 5px;
+}
+
+.sub-menu-opt a:hover {
+    font-weight: bold;
+}
+
+/* Block Small information */
+
+.small-information {
+    margin: 50px;
+}
+
+.location {
+}
+
+.slogan {
+    font-size: 30px;
+}
+
+.image-hotel {
+    text-align: right;
+}
+
+.image-hotel img {
+    width: 70%;
 }
 
 /* footer */
 .footer {
     border: 1px solid black;
-    
 }
