@@ -23,11 +23,11 @@
             // productList.unshift("Lenovo", " Vertu");
             // productList.shift();
             // productList.reverse();
-            // for (const index in productList) {
-            //     if (productList[index] == "Dell") {
-            //         productList.splice(index, 1);
-            //     }
-            // }
+            for (const index in productList) {
+                if (productList[index] == "Dell") {
+                    productList.splice(index, 1);
+                }
+            }
 
             // let delPosition = productList.indexOf("HP");
             // console.log(delPosition);
@@ -36,16 +36,18 @@
             // }
 
             // Sort
-            productList.sort((a, b) => {
-                if (a == b) {
-                    return 0;
-                }
-                if (a > b) {
-                    return -1;
-                } else {
-                    return 1;
-                }
-            });
+            // productList.sort((a, b) => {
+            //     if (a == b) {
+            //         return 0;
+            //     }
+            //     if (a > b) {
+            //         return -1;
+            //     } else {
+            //         return 1;
+            //     }
+            // });
+
+
 
             // Map
             productList.map((item, index) => {
