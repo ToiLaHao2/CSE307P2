@@ -71,16 +71,19 @@
 }
 
 .sub-menu {
-    width: 100%;
+    padding: 0 5px;
+    width: 250%;
     display: none;
     text-align: left;
     list-style-type: none;
     left: 0;
     top: 100%;
+    background-color: white;
 }
 
 .menu-option:hover .sub-menu {
     display: block;
+    position: absolute;
 }
 
 .sub-menu-opt {
