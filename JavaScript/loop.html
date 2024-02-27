@@ -47,7 +47,16 @@
             //     }
             // });
 
-
+            function Search(text) {
+                let check = false;
+                for (const item of productList) {
+                    if (item == text) {
+                        check = true;
+                        break;
+                    }
+                }
+                return check;
+            }
 
             // Map
             productList.map((item, index) => {
