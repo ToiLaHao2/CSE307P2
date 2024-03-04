@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Problem 4</title>
+    </head>
+    <body>
+        <table
+            border="2"
+            style="width: 70%; margin-left: auto; margin-right: auto"
+        >
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody id="products"></tbody>
+        </table>
+
+        <script>
+            let products = [
+                {
+                    id: "pd2",
+                    productName: "Product 1",
+                    quantity: 1000,
+                    price: 109.21,
+                    image: "Product img 1",
+                },
+                {
+                    id: "pd3",
+                    productName: "Product 2",
+                    quantity: 321,
+                    price: 203.32,
+                    image: "Product img 2",
+                },
+                {
+                    id: "pd5",
+                    productName: "Product 3",
+                    quantity: 536,
+                    price: 232.21,
+                    image: "Product img 3",
+                },
+                {
+                    id: "pd6",
+                    productName: "Product 4",
+                    quantity: 432,
+                    price: 782.4,
+                    image: "Product img 4",
+                },
+                {
+                    id: "pd1",
+                    productName: "Product 5",
+                    quantity: 54355,
+                    price: 22.2,
+                    image: "Product img 5",
+                },
+            ];
+            printProducts(products);
+            function sortData(arr) {
+                return products.sort((a, b) => a.productName - b.productName);
+            }
+            function printProducts(arr) {
+                let str = "";
+                arr = sortData(arr);
+                for (let product of products) {
+                    str += `<tr><td>${product.id}</td><td>${product.productName}</td><td>${product.quantity}</td><td>${product.price}</td><td>${product.image}</td></tr>`;
+                }
+                document.getElementById("products").innerHTML = str;
+            }
+            function addFirst(product) {
+                products.unshift(product);
+                printProducts(products);
+            }
+            function addLast(product) {
+                products.push(product);
+                printProducts(products);
+            }
+            function searchByName(name) {
+                for (let product of products) {
+                    if (product.productName == name) {
+                        return product;
+                    }
+                }
+            }
+            function removeById(id) {
+                for (let i = 0; i < products.length; i++) {
+                    if (products[i].id == id) {
+                        let delPosition = i;
+                        products.splice(delPosition, 1);
+                        console.log(products);
+                    }
+                }
+                printProducts(products);
+            }
+            function editProduct(productEdit) {
+                for (let i = 0; i < products.length; i++) {
+                    if (products[i].id == productEdit.id) {
+                        products[i] = productEdit;
+                        console.log(products[i]);
+                    }
+                }
+                printProducts(products);
+            }
+        </script>
+    </body>
+</html>

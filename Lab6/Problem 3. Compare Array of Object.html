@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Problem 3</title>
+    </head>
+    <body>
+        <script>
+            let products = [
+                {
+                    productName: "Product 1",
+                    productImg: "Product img 1",
+                    price: 123.45,
+                },
+                {
+                    productName: "Product 2",
+                    productImg: "Product img 2",
+                    price: 546.78,
+                },
+                {
+                    productName: "Product 3",
+                    productImg: "Product img 3",
+                    price: 890.12,
+                },
+                {
+                    productName: "Product 4",
+                    productImg: "Product img 4",
+                    price: 234.56,
+                },
+                {
+                    productName: "Product 5",
+                    productImg: "Product img 5",
+                    price: 789.01,
+                },
+                {
+                    productName: "Product 6",
+                    productImg: "Product img 6",
+                    price: 345.67,
+                },
+                {
+                    productName: "Product 7",
+                    productImg: "Product img 7",
+                    price: 901.23,
+                },
+                {
+                    productName: "Product 8",
+                    productImg: "Product img 8",
+                    price: 456.78,
+                },
+                {
+                    productName: "Product 9",
+                    productImg: "Product img 9",
+                    price: 102.34,
+                },
+                {
+                    productName: "Product 10",
+                    productImg: "Product img 10",
+                    price: 678.9,
+                },
+            ];
+            function sortData(arr) {
+                return arr.sort((a, b) => a.price - b.price);
+            }
+            console.log(sortData(products))
+        </script>
+    </body>
+</html>
