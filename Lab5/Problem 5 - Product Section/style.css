@@ -33,9 +33,9 @@
     position: absolute;
     top: 0;
     width: 100%;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    height: max-content;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    height: 100%;
     border: 1px solid #f28f0b;
 }
 .buy-product button{
