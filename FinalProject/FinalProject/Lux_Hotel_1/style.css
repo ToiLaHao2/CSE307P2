@@ -45,11 +45,12 @@
 }
 
 .header-menu {
-    padding: 10px;
+    padding: 20px;
     text-align: center;
 }
 
 .menu {
+    font-size: 20px;
     list-style-type: none;
     display: inline-flex;
     margin: 0;
@@ -57,7 +58,7 @@
 }
 
 .menu-option {
-    padding: 10px;
+    margin: 5px 5px 5px 30px;
     position: relative;
 }
 
@@ -71,33 +72,80 @@
 }
 
 .sub-menu {
-    padding: 0 5px;
-    width: 250%;
+    padding: 0;
+    width: 350%;
     display: none;
     text-align: left;
     list-style-type: none;
     left: 0;
     top: 100%;
     background-color: white;
+    position: absolute;
 }
 
 .menu-option:hover .sub-menu {
     display: block;
-    position: absolute;
 }
 
 .sub-menu-opt {
-    padding: 5px;
+    margin-top: 5px;
 }
 
 .sub-menu-opt a:hover {
     font-weight: bold;
 }
-
+/* Block slider image coursel, form */
+.image-slider {
+    position: relative;
+    width: 100%;
+    height: 540px;
+}
+.small-description {
+    margin: 10% 30% 10% 15%;
+}
+.small-description h1 {
+    font-family: "Old Standard TT";
+    font-size: 55px;
+    font-weight: 200;
+    color: white;
+}
+.small-description p {
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+}
+.small-booking-form {
+    width: 30%;
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+.input-group-form {
+    margin-top: 10px;
+}
+.input-group-form input {
+    border: none;
+}
+.input-group-form span {
+    background-color: white;
+    color: #bdab95;
+    border: none;
+}
+.checking-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 50px;
+    color: white;
+    background-color: #bdab95;
+}
 /* Block Small information */
 
 .small-information {
-    margin: 50px;
+    margin-top: 150px;
+    margin-bottom: 150px;
 }
 
 .location {
@@ -116,6 +164,25 @@
 }
 
 /* footer */
-.footer {
-    border: 1px solid black;
+.bottom-title {
+    font-size: 20px;
+}
+.input-group-form-bot {
+    margin-top: 10px;
+}
+.input-group-form-bot input {
+    border: none;
+    padding: 10px;
+}
+.input-group-form-bot span {
+    background-color: white;
+    color: #bdab95;
+    border: none;
+}
+.submit-button-bot {
+    width: 100%;
+    padding: 10px;
+    color: white;
+    background-color: #bdab95;
+    border: none;
 }

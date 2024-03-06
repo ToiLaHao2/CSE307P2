@@ -100,34 +100,159 @@
         </header>
 
         <!--Block slider image coursel, form-->
-        <!-- <section>
-            <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="image-slider">
+            <div
+                id="carouselExampleControlsNoTouching"
+                class="carousel slide"
+                data-bs-touch="false"
+            >
                 <div class="carousel-inner">
-                  <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="Images/Slider 1.jpg" class="d-block w-100"  alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>First slide label</h5>
-                      <p>Some representative placeholder content for the first slide.</p>
+                    <div
+                        class="carousel-item active"
+                        style="background-image: url(Images/Slider\ 1.jpg)"
+                    >
+                        <div class="small-description">
+                            <h1>Comfort & More.</h1>
+                            <h1>Bay & Beyond</h1>
+                            <p>The fitnest hotel near Panama Beach</p>
+                        </div>
                     </div>
-                  </div>
-                  <div class="carousel-item" data-bs-interval="2000" style="height: 540px;">
-                    <img src="Images/Slider 2.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Second slide label</h5>
-                      <p>Some representative placeholder content for the second slide.</p>
+                    <div
+                        class="carousel-item"
+                        style="background-image: url(Images/Slider\ 2.jpg)"
+                    >
+                        <div class="small-description">
+                            <h1>Comfort & More.</h1>
+                            <h1>Bay & Beyond</h1>
+                            <p>The fitnest hotel near Panama Beach</p>
+                        </div>
                     </div>
-                  </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
+                <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExampleControlsNoTouching"
+                    data-bs-slide="prev"
+                >
+                    <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
+                <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExampleControlsNoTouching"
+                    data-bs-slide="next"
+                >
+                    <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
                 </button>
-              </div>
-        </section> -->
+                <div class="small-booking-form">
+                    <form action="">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="arrivalDate"
+                                        >Arrival Date</label
+                                    >
+                                    <div
+                                        class="input-group mb-3 input-group-form"
+                                    >
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="arrivalDate"
+                                            placeholder="Arrival Date"
+                                        />
+                                        <span
+                                            class="input-group-text"
+                                            id="basic-addon2"
+                                            ><i
+                                                class="fa-regular fa-calendar-days"
+                                            ></i
+                                        ></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="departureDate"
+                                        >Departure Date</label
+                                    >
+                                    <div
+                                        class="input-group mb-3 input-group-form"
+                                    >
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="departureDate"
+                                            placeholder="Departure Date"
+                                            aria-describedby="basic-addon2"
+                                        />
+                                        <span
+                                            class="input-group-text"
+                                            id="basic-addon2"
+                                            ><i
+                                                class="fa-solid fa-chevron-down"
+                                            ></i
+                                        ></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="adult">Adult</label>
+                                    <div
+                                        class="input-group mb-3 input-group-form"
+                                    >
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="adult"
+                                            placeholder="Adult"
+                                            aria-describedby="basic-addon2"
+                                        />
+                                        <span
+                                            class="input-group-text"
+                                            id="basic-addon2"
+                                            ><i
+                                                class="fa-solid fa-chevron-down"
+                                            ></i
+                                        ></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="children">Children</label>
+                                    <div
+                                        class="input-group mb-3 input-group-form"
+                                    >
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="children"
+                                            placeholder="Children"
+                                        />
+                                        <span
+                                            class="input-group-text"
+                                            id="basic-addon2"
+                                            ><i
+                                                class="fa-solid fa-chevron-down"
+                                            ></i
+                                        ></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="w-100 checking-button">
+                                CHECK AVAILABILITY
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <!--Block Small information-->
         <div class="container">
             <div class="row align-items-center small-information">
@@ -138,7 +263,7 @@
                     </p>
                 </div>
                 <div class="col-4 image-hotel">
-                    <img src="Images/Panama's Finist Hotel.jpg" alt=""/>
+                    <img src="Images/Panama's Finist Hotel.jpg" alt="" />
                 </div>
                 <div class="col-4">
                     <p class="description-1">
@@ -153,8 +278,9 @@
                 </div>
             </div>
         </div>
-        <hr>
+        <hr />
         <!--Block Room Type, Slider-->
+
         <!--Block Unique Service, Slider-->
         <!--Block Other service, hover-->
         <!--Block show infor, image, embed-->
@@ -163,9 +289,9 @@
         <!--Block article-->
         <!--Block image embed-->
         <!--Footer-->
-        <!-- <footer>
-            <div class="footer">
-                <div class="container" style="display: inline-flex; border: 1px solid black;">
+        <footer>
+            <div class="container">
+                <div class="row">
                     <div class="col-md-3">
                         <img src="Images/logo.png" alt="" />
                         <p>
@@ -175,15 +301,28 @@
                         </p>
                     </div>
                     <div class="col-md-3">
-                        <h3>CONTACT US</h3>
+                        <h3 class="bottom-title">CONTACT US</h3>
                         <ul>
-                            <li><i class="fa-solid fa-location-dot"></i> 221 B, Baker Street, London</li>
-                            <li><a href=""></a><i class="fa-solid fa-phone"></i> +01-7458292</a></li>
-                            <li><a href=""><i class="fa-regular fa-envelope"></i> example@gmail.com</a></li>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i> 221 B,
+                                Baker Street, London
+                            </li>
+                            <li>
+                                <a href=""
+                                    ><i class="fa-solid fa-phone"></i>
+                                    +01-7458292</a
+                                >
+                            </li>
+                            <li>
+                                <a href=""
+                                    ><i class="fa-regular fa-envelope"></i>
+                                    example@gmail.com</a
+                                >
+                            </li>
                         </ul>
                     </div>
                     <div class="col-md-3">
-                        <h3>QUICK LINKS</h3>
+                        <h3 class="bottom-title">QUICK LINKS</h3>
                         <ul>
                             <li><a href="">Home</a></li>
                             <li><a href="">Terms & Condition</a></li>
@@ -192,13 +331,22 @@
                         </ul>
                     </div>
                     <div class="col-md-3">
-                        <h3>DON'T MISS ANY UPDATES</h3>
-                        <form action="">
-
-                        </form>
+                        <h3 class="bottom-title">DON'T MISS ANY UPDATES</h3>
+                        <div class="input-group mb-3 input-group-form-bot">
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Your Email"
+                                aria-describedby="basic-addon2"
+                            />
+                            <span class="input-group-text" id="basic-addon2"
+                                ><i class="fa-regular fa-envelope"></i
+                            ></span>
+                        </div>
+                        <button class="submit-button-bot">SIGN UP NOW</button>
                     </div>
                 </div>
             </div>
-        </footer> -->
+        </footer>
     </body>
 </html>
