@@ -63,7 +63,12 @@
 			let buttonLoading = document.getElementById("change");
 			buttonLoading.onclick = function () {
 				let firstP = document.querySelector("p.example");
-				firstP.style.background-color = "red";
+				firstP.style.backgroundColor = "red";
+                let firstL = document.querySelector("a");
+                firstL.style.border = "1px solid red";
+                let firstPAfterDiv = document.querySelector("div p");
+                firstPAfterDiv.style.fontSize = "24px";
+                firstPAfterDiv.style.color = "blue";
 			}
 		</script>
     </body>
