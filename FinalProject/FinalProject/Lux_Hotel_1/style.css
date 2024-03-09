@@ -81,6 +81,7 @@
     top: 100%;
     background-color: white;
     position: absolute;
+    z-index: 100;
 }
 
 .menu-option:hover .sub-menu {
