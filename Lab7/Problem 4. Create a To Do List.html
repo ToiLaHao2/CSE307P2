@@ -60,10 +60,11 @@
                 background-color: #d9d9d9;
             }
             .status {
-                text-align: center;
+                text-align: left;
             }
             .button-delete {
                 text-align: right;
+                padding: 5px;
             }
             .button-delete button {
                 border: none;
@@ -72,8 +73,8 @@
         </style>
     </head>
     <body>
-        <div class="container" style="border: 1px solid black">
-            <button id="buttonLoading">Show List</button>
+        <div class="container">
+            <!-- <button id="buttonLoading">Show List</button> -->
             <div class="to-do-form">
                 <div class="add-area">
                     <h1 class="title">My To Do List</h1>
@@ -95,7 +96,7 @@
             </div>
         </div>
     </body>
-    <script>
+    <!-- <script>
         let toDoList = [
             {
                 status: "false",
@@ -127,21 +128,20 @@
             for (let item of toDoList) {
                 if (item.status == "true") {
                     str += `<div class="row item" id="item" style="background-color: #888888; color: white;">
-                        <div class="col-md-1 status">
+                        <div class="col-1 status">
                             <i class="fa-solid fa-check"></i>
                         </div>
-                        <div class="col-md-10" style="text-decoration: line-through;">${item.title}</div>
-                        <div class="col-md-1 button-delete">
+                        <div class="col-10" style="text-decoration: line-through;">${item.title}</div>
+                        <div class="col-1 button-delete">
                             <button id="deleteButton" style="background-color: #888888; color: white;">x</button>
                         </div>
                     </div>`;
                 } else {
-                    str += `<div class="row item" id="item">
-                        <div class="col-md-1 status">
-                            
+                    str += `<div class="row item" i                                                              d="item">
+                        <div class="col-1 status">  
                         </div>
-                        <div class="col-md-10">${item.title}</div>
-                        <div class="col-md-1 button-delete">
+                        <div class="col-10">${item.title}</div>
+                        <div class="col-1 button-delete">
                             <button id="deleteButton">x</button>
                         </div>
                     </div>`;
@@ -153,7 +153,7 @@
         buttonLoading.onclick = function () {
             showTodoList();
         };
-    </script>
+    </script> -->
     <script
         src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
@@ -169,7 +169,6 @@
             let content = $("#title").val();
             $("#listGroup").append(`<div class="row item" id="item">
                         <div class="col-md-1 status" id="status">
-                            
                         </div>
                         <div class="col-md-10">${content}</div>
                         <div class="col-md-1 button-delete">
@@ -177,6 +176,7 @@
                         </div>
                     </div>`);
         });
+        // $("#status").on("click",)
         $("#listGroup").on("click", "#deleteButton", function () {
             $(this).parent().parent().remove();
         });
