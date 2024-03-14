@@ -127,21 +127,21 @@
             for (let item of toDoList) {
                 if (item.status == "true") {
                     str += `<div class="row item" id="item" style="background-color: #888888; color: white;">
-                        <div class="col-md-1 status">
+                        <div class="col-1 status">
                             <i class="fa-solid fa-check"></i>
                         </div>
-                        <div class="col-md-10" style="text-decoration: line-through;">${item.title}</div>
-                        <div class="col-md-1 button-delete">
+                        <div class="col-10" style="text-decoration: line-through;">${item.title}</div>
+                        <div class="col-1 button-delete">
                             <button id="deleteButton" style="background-color: #888888; color: white;">x</button>
                         </div>
                     </div>`;
                 } else {
                     str += `<div class="row item" id="item">
-                        <div class="col-md-1 status">
+                        <div class="col-1 status">
                             
                         </div>
-                        <div class="col-md-10">${item.title}</div>
-                        <div class="col-md-1 button-delete">
+                        <div class="col-10">${item.title}</div>
+                        <div class="col-1 button-delete">
                             <button id="deleteButton">x</button>
                         </div>
                     </div>`;
@@ -168,20 +168,23 @@
         $("#add").click(function () {
             let content = $("#title").val();
             $("#listGroup").append(`<div class="row item" id="item">
-                        <div class="col-md-1 status" id="status">
+                        <div class="col-1 status" id="status">
                             
                         </div>
-                        <div class="col-md-10">${content}</div>
-                        <div class="col-md-1 button-delete">
-                            <button id="deleteButton">x</button>
+                        <div class="col-10">${content}</div>
+                        <div class="col-1 button-delete" id="deleteButton">
+                            x
                         </div>
                     </div>`);
         });
         $("#listGroup").on("click", "#deleteButton", function () {
-            $(this).parent().parent().remove();
+            $(this).parent().remove();
         });
         $("#listGroup").on("click", "#status", function () {
-            $(this).parent().append(`<i class="fa-solid fa-check"></i>`);
+            $(this).append(`<i class="fa-solid fa-check"></i>`);
+            $(this).parent().css("color", "white");
+            $(this).parent().css("background-color", "gray");
+            $(this).parent().css("text-decoration", "line-through");
         });
     </script>
 </html>
