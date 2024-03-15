@@ -50,7 +50,7 @@
 }
 
 .menu {
-    font-size: 20px;
+    font-size: 16.5px;
     list-style-type: none;
     display: inline-flex;
     margin: 0;
@@ -64,16 +64,17 @@
 
 .menu-option a {
     text-decoration: none;
-    color: black;
+    color: #a1a1a1;
 }
 
 .menu-option a:hover {
-    font-weight: bold;
+    color: black;
 }
 
 .sub-menu {
     padding: 0;
-    width: 350%;
+    margin: 0;
+    width: 400%;
     display: none;
     text-align: left;
     list-style-type: none;
@@ -89,11 +90,14 @@
 }
 
 .sub-menu-opt {
-    margin-top: 5px;
+    padding: 10px;
 }
 
-.sub-menu-opt a:hover {
-    font-weight: bold;
+.sub-menu-opt:hover a {
+    color: white;
+}
+.sub-menu-opt:hover {
+    background-color: #bdab95;
 }
 /* Block slider image coursel, form */
 .image-slider {
@@ -149,11 +153,19 @@
     margin-bottom: 150px;
 }
 
+.description-1 {
+    font-size: 16px;
+    color: #bdab95;
+}
+
 .location {
+    font-size: 19px;
+    font-family: "Open Sans";
 }
 
 .slogan {
-    font-size: 30px;
+    font-size: 40px;
+    font-family: "Old Standard TT";
 }
 
 .image-hotel {
@@ -161,12 +173,29 @@
 }
 
 .image-hotel img {
-    width: 70%;
+    width: 100%;
 }
 
 /* footer */
+footer {
+    background-color: #222222;
+}
+.bot-footer {
+    padding: 50px;
+    color: #bdab95;
+}
+.bot-description{
+    margin-top: 30px;
+}
 .bottom-title {
     font-size: 20px;
+}
+.bot-contact-information{
+    list-style-type: none;
+    margin-top: 20px;
+}
+.bot-contact-information li{
+    margin-top: 10px;
 }
 .input-group-form-bot {
     margin-top: 10px;

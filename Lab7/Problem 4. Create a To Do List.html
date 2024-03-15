@@ -137,8 +137,8 @@
                         </div>
                     </div>`;
                 } else {
-                    str += `<div class="row item" i                                                              d="item">
-                        <div class="col-1 status">  
+                    str += `<div class="row item" id="item">
+                        <div class="col-1 status">
                         </div>
                         <div class="col-10">${item.title}</div>
                         <div class="col-1 button-delete">
@@ -168,20 +168,23 @@
         $("#add").click(function () {
             let content = $("#title").val();
             $("#listGroup").append(`<div class="row item" id="item">
-                        <div class="col-md-1 status" id="status">
+                        <div class="col-1 status" id="status">
                         </div>
-                        <div class="col-md-10">${content}</div>
-                        <div class="col-md-1 button-delete">
-                            <button id="deleteButton">x</button>
+                        <div class="col-10">${content}</div>
+                        <div class="col-1 button-delete" id="deleteButton">
+                            x
                         </div>
                     </div>`);
         });
         // $("#status").on("click",)
         $("#listGroup").on("click", "#deleteButton", function () {
-            $(this).parent().parent().remove();
+            $(this).parent().remove();
         });
         $("#listGroup").on("click", "#status", function () {
-            $(this).parent().append(`<i class="fa-solid fa-check"></i>`);
+            $(this).append(`<i class="fa-solid fa-check"></i>`);
+            $(this).parent().css("color", "white");
+            $(this).parent().css("background-color", "gray");
+            $(this).parent().css("text-decoration", "line-through");
         });
     </script>
 </html>
