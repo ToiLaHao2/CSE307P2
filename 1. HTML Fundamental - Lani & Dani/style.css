@@ -126,6 +126,7 @@ header {
 }
 
 .on-top-button {
+    display: none;
     color: aliceblue;
     background-color: green;
     width: 50px;
