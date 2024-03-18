@@ -103,23 +103,29 @@
         <div class="image-slider">
             <div
                 id="carouselExampleControlsNoTouching"
-                class="carousel slide"
+                class="carousel slide first-slider"
                 data-bs-touch="false"
             >
                 <div class="carousel-inner">
                     <div
                         class="carousel-item active"
-                        style="background-image: url(Images/Slider\ 1.jpg)"
+                        style="
+                            background-image: url(Images/Slider\ 1.jpg);
+                            background-position: center;
+                        "
                     >
                         <div class="small-description">
-                            <h1>Comfort & More.</h1>
+                            <h1>Luxury Times.</h1>
                             <h1>Bay & Beyond</h1>
                             <p>The fitnest hotel near Panama Beach</p>
                         </div>
                     </div>
                     <div
                         class="carousel-item"
-                        style="background-image: url(Images/Slider\ 2.jpg)"
+                        style="
+                            background-image: url(Images/Slider\ 2.jpg);
+                            background-position: center;
+                        "
                     >
                         <div class="small-description">
                             <h1>Comfort & More.</h1>
@@ -129,28 +135,20 @@
                     </div>
                 </div>
                 <button
-                    class="carousel-control-prev"
+                    class="carousel-control-prev left-button"
                     type="button"
                     data-bs-target="#carouselExampleControlsNoTouching"
                     data-bs-slide="prev"
                 >
-                    <span
-                        class="carousel-control-prev-icon"
-                        aria-hidden="true"
-                    ></span>
-                    <span class="visually-hidden">Previous</span>
+                    <i class="fa-solid fa-chevron-left"></i>
                 </button>
                 <button
-                    class="carousel-control-next"
+                    class="carousel-control-next right-button"
                     type="button"
                     data-bs-target="#carouselExampleControlsNoTouching"
                     data-bs-slide="next"
                 >
-                    <span
-                        class="carousel-control-next-icon"
-                        aria-hidden="true"
-                    ></span>
-                    <span class="visually-hidden">Next</span>
+                    <i class="fa-solid fa-chevron-right"></i>
                 </button>
                 <div class="small-booking-form">
                     <form action="">
@@ -282,7 +280,10 @@
         </div>
         <hr />
         <!--Block Room Type, Slider-->
-
+        <div>
+            <h5>ACCOMODATION & COMFORT</h5>
+            <h3>Eco-Inspired Lodging</h3>
+        </div>
         <!--Block Unique Service, Slider-->
         <!--Block Other service, hover-->
         <!--Block show infor, image, embed-->
@@ -295,7 +296,7 @@
             <div class="container bot-footer">
                 <div class="row">
                     <div class="col-md-3">
-                        <img src="Images/logo.png" alt=""/>
+                        <img src="Images/logo.png" alt="" />
                         <p class="bot-description">
                             Hotel Luxe is an all-in-one WordPress theme to make
                             hotel websites of any kind. Make the hotel website
@@ -310,22 +311,18 @@
                                 Baker Street, London
                             </li>
                             <li>
-                                <a href=""
-                                    ><i class="fa-solid fa-phone"></i>
-                                    +01-7458292</a
-                                >
+                                <i class="fa-solid fa-phone"></i>
+                                <a href=""> +01-7458292</a>
                             </li>
                             <li>
-                                <a href=""
-                                    ><i class="fa-regular fa-envelope"></i>
-                                    example@gmail.com</a
-                                >
+                                <i class="fa-regular fa-envelope"></i>
+                                <a href=""> example@gmail.com</a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-md-3">
                         <h3 class="bottom-title">QUICK LINKS</h3>
-                        <ul>
+                        <ul class="bot-contact-information">
                             <li><a href="">Home</a></li>
                             <li><a href="">Terms & Condition</a></li>
                             <li><a href="">FAQ</a></li>
