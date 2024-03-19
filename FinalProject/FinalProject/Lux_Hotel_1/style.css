@@ -201,7 +201,36 @@
 .image-hotel img {
     width: 100%;
 }
-
+/* room type, slider */
+.title {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 15px;
+    font-weight: 100;
+}
+.sub-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 40px;
+    font-family: "Old Standard TT";
+}
+.rooms-slider {
+    width: fit-content;
+    padding-bottom: 40px;
+    border: 1px solid #a1a1a1;
+    border-radius: 5px;
+    box-shadow: 0px 3px 0px 0px #a1a1a1;
+    margin-bottom: 20px;
+}
+.rooms-slider-title {
+    margin: 10px;
+    font-family: "Old Standard TT";
+}
+.rooms-slider-price {
+    margin-left: 10px;
+    font-size: 18px;
+    color: #a1a1a1;
+}
 /* footer */
 footer {
     background-color: #222222;
