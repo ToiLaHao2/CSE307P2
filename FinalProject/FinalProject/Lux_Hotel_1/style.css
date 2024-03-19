@@ -20,7 +20,6 @@
     margin: 0;
     padding: 0;
 }
-
 .address-info li a {
     text-decoration: none;
     color: #d3d3d3;
@@ -32,12 +31,30 @@
 }
 
 .address-info li {
+    margin-left: 30px;
+    margin-bottom: 0px;
+    text-align: center;
+    padding: 0px;
+    font-size: 14px;
+}
+
+.address-info-sign {
+    list-style-type: none;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+}
+.address-info-sign li a {
+    text-decoration: none;
+    color: #d3d3d3;
+}
+.address-info-sign li {
     margin-left: 10px;
     margin-bottom: 0px;
     text-align: center;
     padding: 0px;
+    font-size: 14px;
 }
-
 .header-logo {
     text-align: center;
     padding: 40px;
@@ -110,7 +127,7 @@
 }
 .small-description h1 {
     font-family: "Old Standard TT";
-    font-size: 55px;
+    font-size: 65px;
     font-weight: 200;
     color: white;
 }
@@ -142,6 +159,7 @@
 }
 .checking-button {
     margin-top: 10px;
+    margin-bottom: 5px;
     height: 50px;
     color: white;
     background-color: #bdab95;
@@ -212,6 +230,7 @@
     text-align: center;
     margin-bottom: 50px;
     font-size: 40px;
+    font-weight: lighter;
     font-family: "Old Standard TT";
 }
 .rooms-slider {
@@ -231,6 +250,125 @@
     font-size: 18px;
     color: #a1a1a1;
 }
+/* Block Unique Service, Slider */
+.unique-service {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.experience-slider-1 {
+    background-image: url("Images/Culinary\ Experience.jpg");
+    width: 100%;
+    height: 600px;
+    background-position: top;
+}
+.experience-slider-2 {
+    background-image: url("Images/Spa\ like\ no\ other.jpg");
+    width: 100%;
+    height: 600px;
+    background-position: top;
+}
+.experience-information {
+    color: white;
+    height: 100%;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.experience-information-area {
+    padding: 14% 5% 0px 30%;
+    position: relative;
+}
+.experience-information-title {
+    font-family: "Old Standard TT";
+    font-size: 63px;
+    font-weight: 100;
+}
+.experience-information-description {
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 100;
+}
+.experience-information-book {
+    color: white;
+    background-color: #bdab95;
+    border: none;
+    width: 200px;
+    padding: 10px;
+}
+.experience-information-buttons {
+    width: 4%;
+    color: white;
+    position: absolute;
+    bottom: 25%;
+    left: 15%;
+    padding: 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.experience-information-button {
+    width: 50%;
+    border: 1px solid white;
+}
+.carousel-indicators-buttons {
+}
+/* Block Other service, hover */
+.other-service{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.services {
+    display: flex;
+}
+.service-block {
+    width: 25%;
+    margin: 20px;
+    text-align: center;
+    border: 3px solid #eaeaea;
+    border-radius: 10px;
+}
+.service-block img {
+    height: 90px;
+    margin-bottom: 30px;
+}
+.service-block h5 {
+    font-weight: 400;
+}
+.service-area {
+    padding: 60px 20px 30px 20px;
+    border-radius: 10px;
+}
+.service-block p {
+    font-weight: 100;
+    color: #a1a1a1;
+    font-size: 18px;
+}
+.service-1:hover {
+    color: #bdab95;
+    background-image: url("Images/plane\ 2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.service-2:hover {
+    color: #bdab95;
+    background-image: url("Images/breakfast\ 2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.service-3:hover {
+    color: #bdab95;
+    background-image: url("Images/tour-guide\ 2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.service-4:hover {
+    color: #bdab95;
+    background-image: url("Images/bbq\ 2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.service-block:hover .service-area {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
 /* footer */
 footer {
     background-color: #222222;
