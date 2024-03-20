@@ -311,7 +311,7 @@
 .carousel-indicators-buttons {
 }
 /* Block Other service, hover */
-.other-service{
+.other-service {
     margin-top: 20px;
     margin-bottom: 50px;
 }
@@ -368,13 +368,93 @@
 .service-block:hover .service-area {
     background-color: rgba(0, 0, 0, 0.6);
 }
+/* Block what others say */
+.what-other-say {
+    display: flex;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.other-say {
+    border: 3px solid #eaeaea;
+    width: 30.3%;
+    margin: 20px;
+    padding: 60px 30px 40px 30px;
+    border-radius: 5px;
+}
+.avatar {
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+.name {
+    font-family: "Old Standard TT";
+    font-size: 24px;
+    font-weight: 100;
+}
+.comment {
+    color: #bdab95;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+/* Block article */
+.article-and-news {
+    display: flex;
+    margin-bottom: 30px;
+}
+.articles {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.article {
+    padding-bottom: 25px;
+    width: 30%;
+    margin: 22px;
+    border: 2px solid #eaeaea;
+    border-radius: 5px;
+}
+.article-image {
+    width: 100%;
+}
+.article-area {
+    padding: 20px;
+}
+.article-title {
+    font-size: 22px;
+    font-weight: 400;
+}
+.article-small-title {
+    color: #b1a9a0;
+}
+.article-information {
+    color: #585551;
 
+    font-size: 17px;
+}
+.article-button-read {
+    text-align: center;
+    color: #bdab95;
+    font-size: 15px;
+    text-decoration: none;
+}
+.article-button-read::after {
+    content: "\f105";
+    font-family: FontAwesome;
+    margin-left: 7px;
+}
+.view-more-article {
+    text-align: center;
+}
+.view-more-button{
+    padding: 20px;
+    border-bottom: 3px solid #bdab95;
+    text-decoration: none;
+    color: #bdab95;
+}
 /* footer */
 footer {
     background-color: #222222;
 }
 .bot-footer {
-    padding: 70px;
+    padding: 50px;
     color: #bdab95;
 }
 .bot-description {
@@ -419,4 +499,14 @@ footer {
     color: white;
     background-color: #bdab95;
     border: none;
+}
+.copyright-area{
+    color: #2D2D2D;
+    text-align: center;
+    background-color: black;
+    padding: 20px;
+}
+.copyright-area::before{
+    content: "\f1f9";
+    font-family: FontAwesome;
 }
