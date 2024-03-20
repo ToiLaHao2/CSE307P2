@@ -1,12 +1,13 @@
 .top-header {
+    width: 100%;
     text-align: center;
+    display: flex;
     background-color: #222222;
     color: #d3d3d3;
     font-size: 12px;
     padding: 5px;
     padding-bottom: 0px;
-    overflow: hidden;
-    height: 30px;
+    height: auto;
 }
 
 .top-header-address {
@@ -122,8 +123,12 @@
     width: 100%;
     height: 540px;
 }
+.slider-item {
+    height: 540px;
+}
 .small-description {
-    margin: 10% 30% 10% 15%;
+    padding-left: 15%;
+    padding-top: 10%;
 }
 .small-description h1 {
     font-family: "Old Standard TT";
@@ -140,7 +145,7 @@
     width: 30%;
     height: 55%;
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 55%;
     padding: 30px;
     background-color: rgba(0, 0, 0, 0.6);
@@ -260,12 +265,14 @@
     width: 100%;
     height: 600px;
     background-position: top;
+    background-repeat: no-repeat;
 }
 .experience-slider-2 {
     background-image: url("Images/Spa\ like\ no\ other.jpg");
     width: 100%;
     height: 600px;
     background-position: top;
+    background-repeat: no-repeat;
 }
 .experience-information {
     color: white;
@@ -293,6 +300,7 @@
     border: none;
     width: 200px;
     padding: 10px;
+    border-radius: 5px;
 }
 .experience-information-buttons {
     width: 4%;
@@ -308,8 +316,7 @@
     width: 50%;
     border: 1px solid white;
 }
-.carousel-indicators-buttons {
-}
+
 /* Block Other service, hover */
 .other-service {
     margin-top: 20px;
@@ -335,6 +342,8 @@
 .service-area {
     padding: 60px 20px 30px 20px;
     border-radius: 10px;
+    width: 100%;
+    height: 100%;
 }
 .service-block p {
     font-weight: 100;
@@ -443,7 +452,7 @@
 .view-more-article {
     text-align: center;
 }
-.view-more-button{
+.view-more-button {
     padding: 20px;
     border-bottom: 3px solid #bdab95;
     text-decoration: none;
@@ -459,14 +468,17 @@ footer {
 }
 .bot-description {
     margin-top: 30px;
+    margin-bottom: 50px;
 }
 .bottom-title {
     font-size: 20px;
+    margin-bottom: 30px;
 }
 .bot-contact-information {
     padding: 0;
     list-style-type: none;
     margin-top: 20px;
+    margin-bottom: 50px;
 }
 .bot-contact-information li {
     margin-top: 15px;
@@ -500,13 +512,125 @@ footer {
     background-color: #bdab95;
     border: none;
 }
-.copyright-area{
-    color: #2D2D2D;
+.copyright-area {
+    color: #2d2d2d;
     text-align: center;
     background-color: black;
     padding: 20px;
 }
-.copyright-area::before{
+.copyright-area::before {
     content: "\f1f9";
     font-family: FontAwesome;
+}
+@media (max-width: 600px) {
+    /* Header */
+    .top-header {
+        display: block;
+    }
+    .top-header-address {
+        text-align: center;
+        width: 100%;
+    }
+    .top-header-contact {
+        text-align: center;
+        width: 100%;
+    }
+    /* Block slider image coursel, form */
+    .image-slider {
+        display: block;
+    }
+    .slider-item {
+        height: 300px !important;
+    }
+    .small-description {
+        padding-top: 10% !important;
+        padding-left: 3% !important;
+        text-align: center;
+    }
+    .small-description h1 {
+        font-size: 40px;
+    }
+    .small-description p {
+        font-size: 20px;
+        font-weight: 100;
+    }
+    .small-booking-form {
+        top: 350px;
+        left: 0;
+        width: 100%;
+        margin: 10px;
+        background-color: white;
+        border: 1px solid #bdab95;
+        color: #b1a9a0;
+    }
+    .input-group-form {
+        border: 1px solid #bdab95;
+        color: #bdab95;
+    }
+    .booking-element {
+        width: 50%;
+    }
+    /* Block Small Information */
+    .small-information {
+        display: block;
+        padding: 10px;
+    }
+    .info-column {
+        width: 100%;
+        padding: 10px;
+    }
+    /* Block Unique Service, Slider */
+    .unique-service {
+        height: 850px !important;
+    }
+    .experience-information {
+        width: 100%;
+        height: 80% !important;
+    }
+    .experience-information-area {
+        padding-top: 80px;
+        padding-left: 10px !important;
+    }
+    .experience-slider-1 {
+        background-size: 850px;
+    }
+    .experience-slider-2 {
+        background-size: 200%;
+        background-position: top;
+    }
+    .experience-information-title {
+        font-family: "Old Standard TT" !important;
+        font-size: 44px;
+    }
+    .experience-information-description {
+        font-size: 20px;
+    }
+    .experience-information-buttons {
+        width: 80px;
+        height: 40px;
+        bottom: 30%;
+        left: 2%;
+    }
+    /* Block Other service, hover */
+    .services {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .service-block {
+        width: 40%;
+    }
+    /* What other say */
+    .what-other-say {
+        display: block;
+    }
+    .other-say {
+        width: 90%;
+    }
+    /* Aticle */
+    .article-and-news {
+        display: block;
+    }
+    .article {
+        width: 90%;
+    }
 }

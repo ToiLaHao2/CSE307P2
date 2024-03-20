@@ -10,11 +10,6 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"
-        ></script>
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -30,72 +25,94 @@
 
         <header>
             <div class="top-header">
-                <div class="container" style="display: inline-flex">
-                    <div class="top-header-address">
-                        <ul class="address-info">
-                            <li>
-                                <a href=""
-                                    ><i class="fa-solid fa-phone"></i> 1 877
-                                    834245</a
-                                >
-                            </li>
-                            <li>
-                                <p>
-                                    <i class="fa-solid fa-location-dot"></i>
-                                    AmeliaIsland, Panama
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="top-header-contact">
-                        <ul class="address-info-sign">
-                            <li>
-                                <a href=""
-                                    ><i class="fa-brands fa-facebook-f"></i
-                                ></a>
-                            </li>
-                            <li>
-                                <a href=""
-                                    ><i class="fa-brands fa-dribbble"></i
-                                ></a>
-                            </li>
-                            <li>
-                                <a href=""
-                                    ><i class="fa-brands fa-google-plus-g"></i
-                                ></a>
-                            </li>
-                        </ul>
+                <div class="container">
+                    <div class="row">
+                        <div class="top-header-address">
+                            <ul class="address-info">
+                                <li>
+                                    <a href=""
+                                        ><i class="fa-solid fa-phone"></i> 1 877
+                                        834245</a
+                                    >
+                                </li>
+                                <li>
+                                    <p>
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        AmeliaIsland, Panama
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="top-header-contact">
+                            <ul class="address-info-sign">
+                                <li>
+                                    <a href=""
+                                        ><i class="fa-brands fa-facebook-f"></i
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a href=""
+                                        ><i class="fa-brands fa-dribbble"></i
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a href=""
+                                        ><i
+                                            class="fa-brands fa-google-plus-g"
+                                        ></i
+                                    ></a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="header-logo">
                 <img src="Images/logo.png" alt="" />
             </div>
-            <div class="header-menu">
-                <ul class="menu">
-                    <li class="menu-option"><a href="">Home</a></li>
-                    <li class="menu-option">
-                        <a href="">Rooms</a>
-                        <ul class="sub-menu">
-                            <li class="sub-menu-opt">
-                                <a href="">Room Booking List</a>
-                            </li>
-                            <li class="sub-menu-opt">
-                                <a href="">Room Cards</a>
-                            </li>
-                            <li class="sub-menu-opt">
-                                <a href="">Room Coursel</a>
-                            </li>
-                            <li class="sub-menu-opt">
-                                <a href="">Room Single</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-option"><a href="">Elements</a></li>
-                    <li class="menu-option"><a href="">Pages</a></li>
-                    <li class="menu-option"><a href="">Blogs</a></li>
-                    <li class="menu-option"><a href="">Contact</a></li>
-                </ul>
+            <div class="header-menu nav d-none d-lg-block">
+                <div class="container">
+                    <ul class="menu navbar nav justify-content-center" id="menu">
+                        <li class="menu-option"><a href="">Home</a></li>
+                        <li class="menu-option">
+                            <a href="">Rooms</a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-opt">
+                                    <a href="">Room Booking List</a>
+                                </li>
+                                <li class="sub-menu-opt">
+                                    <a href="">Room Cards</a>
+                                </li>
+                                <li class="sub-menu-opt">
+                                    <a href="">Room Coursel</a>
+                                </li>
+                                <li class="sub-menu-opt">
+                                    <a href="">Room Single</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-option"><a href="">Elements</a></li>
+                        <li class="menu-option"><a href="">Pages</a></li>
+                        <li class="menu-option"><a href="">Blogs</a></li>
+                        <li class="menu-option"><a href="">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-mobile d-block d-lg-none">
+                <div class="container">
+                    <div class="row" style="padding: 5px; text-align: center">
+                        <div
+                            class="col-12"
+                            id="menu-button"
+                            style="color: white; padding: 5px"
+                        >
+                            <i
+                                class="fa-solid fa-bars"
+                                style="background-color: #bdab95; padding: 5px"
+                            ></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
 
@@ -108,12 +125,12 @@
             >
                 <div class="carousel-inner">
                     <div
-                        class="carousel-item active"
+                        class="carousel-item active slider-item"
                         style="
                             background-image: url(Images/Slider\ 1.jpg);
                             background-position: center;
-                            width: 100%;
-                            height: 600px;
+                            background-repeat: no-repeat;
+                            background-size: 100%;
                         "
                     >
                         <div class="small-description">
@@ -123,12 +140,11 @@
                         </div>
                     </div>
                     <div
-                        class="carousel-item"
+                        class="carousel-item slider-item"
                         style="
                             background-image: url(Images/Slider\ 2.jpg);
                             background-position: center;
-                            width: 100%;
-                            height: 600px;
+                            background-size: 100%;
                         "
                     >
                         <div class="small-description">
@@ -154,120 +170,106 @@
                 >
                     <i class="fa-solid fa-chevron-right"></i>
                 </button>
-                <div class="small-booking-form">
-                    <form action="">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label for="arrivalDate"
-                                        >Arrival Date</label
-                                    >
-                                    <div
-                                        class="input-group mb-3 input-group-form"
-                                    >
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            id="arrivalDate"
-                                            placeholder="Arrival Date"
-                                        />
-                                        <span
-                                            class="input-group-text"
-                                            id="basic-addon2"
-                                            ><i
-                                                class="fa-regular fa-calendar-days"
-                                            ></i
-                                        ></span>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="departureDate"
-                                        >Departure Date</label
-                                    >
-                                    <div
-                                        class="input-group mb-3 input-group-form"
-                                    >
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            id="departureDate"
-                                            placeholder="Departure Date"
-                                            aria-describedby="basic-addon2"
-                                        />
-                                        <span
-                                            class="input-group-text"
-                                            id="basic-addon2"
-                                            ><i
-                                                class="fa-solid fa-chevron-down"
-                                            ></i
-                                        ></span>
-                                    </div>
+            </div>
+            <div class="small-booking-form">
+                <form action="">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 booking-element">
+                                <label for="arrivalDate">Arrival Date</label>
+                                <div class="input-group mb-3 input-group-form">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="arrivalDate"
+                                        placeholder="Arrival Date"
+                                    />
+                                    <span
+                                        class="input-group-text"
+                                        id="basic-addon2"
+                                        ><i
+                                            class="fa-regular fa-calendar-days"
+                                        ></i
+                                    ></span>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label for="adult">Adult</label>
-                                    <div
-                                        class="input-group mb-3 input-group-form"
-                                    >
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            id="adult"
-                                            placeholder="Adult"
-                                            aria-describedby="basic-addon2"
-                                        />
-                                        <span
-                                            class="input-group-text"
-                                            id="basic-addon2"
-                                            ><i
-                                                class="fa-solid fa-chevron-down"
-                                            ></i
-                                        ></span>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="children">Children</label>
-                                    <div
-                                        class="input-group mb-3 input-group-form"
-                                    >
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            id="children"
-                                            placeholder="Children"
-                                        />
-                                        <span
-                                            class="input-group-text"
-                                            id="basic-addon2"
-                                            ><i
-                                                class="fa-solid fa-chevron-down"
-                                            ></i
-                                        ></span>
-                                    </div>
+                            <div class="col-md-6 booking-element">
+                                <label for="departureDate"
+                                    >Departure Date</label
+                                >
+                                <div class="input-group mb-3 input-group-form">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="departureDate"
+                                        placeholder="Departure Date"
+                                        aria-describedby="basic-addon2"
+                                    />
+                                    <span
+                                        class="input-group-text"
+                                        id="basic-addon2"
+                                        ><i
+                                            class="fa-regular fa-calendar-days"
+                                        ></i
+                                    ></span>
                                 </div>
                             </div>
-                            <button class="w-100 checking-button">
-                                CHECK AVAILABILITY
-                            </button>
                         </div>
-                    </form>
-                </div>
+                        <div class="row">
+                            <div class="col-md-6 booking-element">
+                                <label for="adult">Adult</label>
+                                <div class="input-group mb-3 input-group-form">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="adult"
+                                        placeholder="Adult"
+                                        aria-describedby="basic-addon2"
+                                    />
+                                    <span
+                                        class="input-group-text"
+                                        id="basic-addon2"
+                                        ><i class="fa-solid fa-chevron-down"></i
+                                    ></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 booking-element">
+                                <label for="children">Children</label>
+                                <div class="input-group mb-3 input-group-form">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="children"
+                                        placeholder="Children"
+                                    />
+                                    <span
+                                        class="input-group-text"
+                                        id="basic-addon2"
+                                        ><i class="fa-solid fa-chevron-down"></i
+                                    ></span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="w-100 checking-button">
+                            CHECK AVAILABILITY
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
         <!--Block Small information-->
         <div class="container">
             <div class="row align-items-center small-information">
-                <div class="col-4">
+                <div class="col-4 info-column">
                     <p class="location">Amelia Island, Panama</p>
                     <p class="slogan">
                         Panama's Finest Hotel. Make Your Golden Memories.
                     </p>
                 </div>
-                <div class="col-4 image-hotel">
+                <div class="col-4 image-hotel info-column">
                     <img src="Images/Panama's Finist Hotel.jpg" alt="" />
                 </div>
-                <div class="col-4">
+                <div class="col-4 info-column">
                     <p class="description-1">
                         Make memories at Hotel Luxe, Amelia Island, where
                         southern charm, magnificent scenery and casually elegant
@@ -342,7 +344,7 @@
                     >
                         <div class="experience-information">
                             <div class="experience-information-area">
-                                <h1 class="experience-information-title">
+                                <h1 class="exp experience-information-title">
                                     Culinary Experience
                                 </h1>
                                 <p class="experience-information-description">
@@ -692,4 +694,17 @@
             </div>
         </footer>
     </body>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"
+    ></script>
+    <script>
+        let menuButton = document.getElementById("menu-button");
+        let menu = document.getElementById("menu");
+
+        menuButton.addEventListener("click", ()=> {
+            menu.style.display = "block";
+        })
+    </script>
 </html>
