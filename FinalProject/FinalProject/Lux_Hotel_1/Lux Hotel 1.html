@@ -70,9 +70,33 @@
             <div class="header-logo">
                 <img src="Images/logo.png" alt="" />
             </div>
-            <div class="header-menu nav d-none d-lg-block">
+            <div class="menu-mobile">
                 <div class="container">
-                    <ul class="menu navbar nav justify-content-center" id="menu">
+                    <div
+                        style="
+                            padding: 5px;
+                            text-align: center;
+                        "
+                    >
+                        <div id="menu-button" style="color: white">
+                            <i
+                                class="fa-solid fa-bars"
+                                style="
+                                    background-color: #bdab95;
+                                    padding: 10px;
+                                    border-radius: 5px;
+                                "
+                            ></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu">
+                <div class="container">
+                    <ul
+                        class="menu navbar nav justify-content-center"
+                        id="menu"
+                    >
                         <li class="menu-option"><a href="">Home</a></li>
                         <li class="menu-option">
                             <a href="">Rooms</a>
@@ -96,22 +120,6 @@
                         <li class="menu-option"><a href="">Blogs</a></li>
                         <li class="menu-option"><a href="">Contact</a></li>
                     </ul>
-                </div>
-            </div>
-            <div class="nav-mobile d-block d-lg-none">
-                <div class="container">
-                    <div class="row" style="padding: 5px; text-align: center">
-                        <div
-                            class="col-12"
-                            id="menu-button"
-                            style="color: white; padding: 5px"
-                        >
-                            <i
-                                class="fa-solid fa-bars"
-                                style="background-color: #bdab95; padding: 5px"
-                            ></i>
-                        </div>
-                    </div>
                 </div>
             </div>
         </header>
@@ -289,13 +297,9 @@
         <div class="container">
             <h5 class="title">ACCOMODATION & COMFORT</h5>
             <h3 class="sub-title">Eco-Inspired Lodging</h3>
-            <div
-                id="carouselExampleControlsNoTouching"
-                class="carousel slide first-slider"
-                data-bs-touch="false"
-            >
-                <div class="carousel-inner">
-                    <div class="rooms-slider carousel-item active">
+            <div id="formList">
+                <div id="list">
+                    <div class="rooms-slider item">
                         <div class="rooms-slider-image">
                             <img src="Images/Room - Standard.jpg" alt="" />
                         </div>
@@ -304,34 +308,45 @@
                             Starting from $60.0/night
                         </div>
                     </div>
-                    <div class="rooms-slider carousel-item">
+                    <div class="rooms-slider item">
                         <div class="rooms-slider-image">
-                            <img src="Images/Room - Standard.jpg" alt="" />
+                            <img src="Images/Room - Beach Villa.jpg" alt="" />
                         </div>
-                        <h3 class="rooms-slider-title">Standard Room</h3>
+                        <h3 class="rooms-slider-title">Beach Villa</h3>
                         <div class="rooms-slider-price">
-                            Starting from $60.0/night
+                            Starting from $90.0/night
                         </div>
                     </div>
-                    <div class="rooms-slider carousel-item">
+                    <div class="rooms-slider item">
                         <div class="rooms-slider-image">
-                            <img src="Images/Room - Standard.jpg" alt="" />
+                            <img
+                                src="Images/Room - Exclusive Suite.jpg"
+                                alt=""
+                            />
                         </div>
-                        <h3 class="rooms-slider-title">Standard Room</h3>
+                        <h3 class="rooms-slider-title">Exclusive Suite</h3>
                         <div class="rooms-slider-price">
-                            Starting from $60.0/night
+                            Starting from $120.0/night
                         </div>
                     </div>
-                    <div class="rooms-slider carousel-item">
+                    <div class="rooms-slider item">
                         <div class="rooms-slider-image">
-                            <img src="Images/Room - Standard.jpg" alt="" />
+                            <img src="Images/Room - Luxury Suite.jpg" alt="" />
                         </div>
-                        <h3 class="rooms-slider-title">Standard Room</h3>
+                        <h3 class="rooms-slider-title">Luxury Suite</h3>
                         <div class="rooms-slider-price">
-                            Starting from $60.0/night
+                            Starting from $160.0/night
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="direction">
+                <button id="prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button id="next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
             </div>
         </div>
         <!--Block Unique Service, Slider-->
@@ -700,11 +715,23 @@
         crossorigin="anonymous"
     ></script>
     <script>
-        let menuButton = document.getElementById("menu-button");
-        let menu = document.getElementById("menu");
-
-        menuButton.addEventListener("click", ()=> {
-            menu.style.display = "block";
-        })
+        document.getElementById("next").onclick = function () {
+            const widthItem =
+                document.querySelector(".rooms-slider").offsetWidth;
+            document.getElementById("formList").scrollLeft += widthItem;
+        };
+        document.getElementById("prev").onclick = function () {
+            const widthItem =
+                document.querySelector(".rooms-slider").offsetWidth;
+            document.getElementById("formList").scrollLeft -= widthItem;
+        };
+        document.getElementById("menu-button").onclick = function () {
+            let menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        };
     </script>
 </html>

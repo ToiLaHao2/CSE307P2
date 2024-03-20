@@ -61,6 +61,9 @@
     padding: 40px;
     border-bottom: 1px solid #f5f5f5;
 }
+.menu-mobile {
+    display: none;
+}
 
 .header-menu {
     padding: 20px;
@@ -239,21 +242,67 @@
     font-family: "Old Standard TT";
 }
 .rooms-slider {
-    width: fit-content;
+    height: 430px;
+    margin: 10px;
+    width: 368px;
     padding-bottom: 40px;
-    border: 1px solid #a1a1a1;
+    border: 0.5px solid #a1a1a1;
+    transition: 0.5s;
     border-radius: 5px;
-    box-shadow: 0px 3px 0px 0px #a1a1a1;
     margin-bottom: 20px;
+    scroll-snap-align: start;
+}
+.rooms-slider-image {
+    width: 100%;
+}
+.rooms-slider-image img {
+    width: 99.9%;
 }
 .rooms-slider-title {
-    margin: 10px;
+    margin: 20px;
     font-family: "Old Standard TT";
+    font-size: 22px;
+    font-weight: 100;
 }
 .rooms-slider-price {
-    margin-left: 10px;
+    margin-left: 20px;
     font-size: 18px;
     color: #a1a1a1;
+}
+.direction {
+    margin-top: 10px;
+    margin-bottom: 150px;
+    padding: 0;
+    display: flex;
+    text-align: center;
+    width: 70px;
+    border: 2px solid #a1a1a1;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.direction button {
+    color: #bdab95;
+    border: 1px solid #a1a1a1;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    width: 50%;
+}
+#list {
+    display: flex;
+    width: max-content;
+}
+#formList {
+    width: 1160px;
+    max-width: 100%;
+    overflow: auto;
+    margin: 100px auto 50px;
+    scroll-behavior: smooth;
+    scroll-snap-type: both;
+}
+#formList::-webkit-scrollbar {
+    display: none;
 }
 /* Block Unique Service, Slider */
 .unique-service {
@@ -375,6 +424,7 @@
     background-size: cover;
 }
 .service-block:hover .service-area {
+    transition: 0.1s;
     background-color: rgba(0, 0, 0, 0.6);
 }
 /* Block what others say */
@@ -535,6 +585,56 @@ footer {
         text-align: center;
         width: 100%;
     }
+    .menu-mobile {
+        display: block;
+    }
+    .header-menu {
+        text-align: center;
+    }
+    .menu {
+        display: none;
+        width: 100%;
+        font-size: 16.5px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu-option {
+        /* margin: 5px 5px 5px 30px; */
+        display: flex;
+        padding: 10px;
+        border-bottom: 2px solid #bdab95;
+        position: relative;
+    }
+    .menu-option::after{
+        content: "\f078";
+        font-family: FontAwesome;
+    }
+    .menu-option a {
+        display: block;
+        width: 90%;
+        text-decoration: none;
+        color: #a1a1a1;
+    }
+
+    .sub-menu {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        display: none;
+        text-align: center;
+        list-style-type: none;
+        left: 0;
+        top: 100%;
+        background-color: white;
+        position: absolute;
+    }
+
+    .menu-option:hover .sub-menu {
+        display: inline-block;
+    }
+
     /* Block slider image coursel, form */
     .image-slider {
         display: block;
@@ -578,6 +678,13 @@ footer {
     .info-column {
         width: 100%;
         padding: 10px;
+    }
+    /* Block Room Type slider */
+    #formList {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: 378px;
+        max-width: 100%;
     }
     /* Block Unique Service, Slider */
     .unique-service {
