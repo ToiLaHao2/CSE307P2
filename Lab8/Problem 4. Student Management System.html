@@ -18,20 +18,19 @@
                 <div class="col-2" style="border: 1px solid black">
                     <h1>Class List</h1>
                     <ul>
-                        <li>Lớp 1</li>
-                        <li>Lớp 2</li>
+                        <li id="class1">Lớp 1</li>
+                        <li id="class2">Lớp 2</li>
                     </ul>
                 </div>
                 <div class="col-9 p-0" style="border: 1px solid black">
-                    <div>
-                        <h5 style="border: 1px solid gray; padding: 10px">
-                            Edit student's information
-                        </h5>
+                    <h5 style="border: 1px solid gray; padding: 10px">
+                        Edit student's information
+                    </h5>
+                    <div style="display: flex">
                         <form style="padding: 10px">
                             <div style="text-align: center; display: flex">
                                 <input
                                     type="text"
-                                    class="form-control"
                                     id="studentId"
                                     value=""
                                     placeholder="ID"
@@ -39,7 +38,6 @@
                                 />
                                 <input
                                     type="text"
-                                    class="form-control"
                                     id="studentName"
                                     value=""
                                     placeholder="Full Name"
@@ -47,7 +45,6 @@
                                 />
                                 <input
                                     type="text"
-                                    class="form-control"
                                     id="studentEmail"
                                     value=""
                                     placeholder="Email"
@@ -56,19 +53,38 @@
                                 <select
                                     name="grade"
                                     id="grade"
-                                    class="form-select"
                                     style="margin-right: 20px; width: 100px"
                                 >
                                     <option unselected>Class...</option>
-                                    <option value="Lớp 1">Lớp 1</option>
-                                    <option value="Lớp 2">Lớp 2</option>
-                                    <option value="Lớp 3">Lớp 3</option>
+                                    <option value="Class 1">Class 1</option>
+                                    <option value="Class 2">Class 2</option>
+                                    <option value="Class 3">Class 3</option>
                                 </select>
-                                <button class="btn btn-primary" type="submit">
-                                    Update
-                                </button>
                             </div>
                         </form>
+                        <button class="btn btn-primary" id="updateButton">
+                            Update
+                        </button>
+                    </div>
+                    <div style="padding: 20px">
+                        <div>Student List</div>
+                        <table>
+                            <colgroup>
+                                <col style="width: 10%" />
+                                <col style="width: 40%" />
+                                <col style="width: 10%" />
+                                <col style="width: 30%" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Full Name</th>
+                                    <th>Student ID</th>
+                                    <th>Function</th>
+                                </tr>
+                            </thead>
+                            <tbody id="datas"></tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -84,7 +100,59 @@
             crossorigin="anonymous"
         ></script>
         <script>
-            
+            let array = [];
+            jQuery.get(
+                "http://139.180.213.49/getdata-student.php?Type=Student",
+                {
+                    ID: "",
+                    Name: "",
+                    Email: "",
+                    Class: "",
+                },
+                function (data) {
+                    array.push(data);
+                    console.log(data);
+                    for (getData of data) {
+                        $("#datas").append(`<tr>
+                        <td id="studentID">${getData.ID}</td>
+                        <td id="studentName">${getData.Name}</td>
+                        <td id="studentEmail">${getData.Email}</td>
+                        <td><button id="editButton" style="margin-right:10px">Edit</button><button id="deleteButton">Delete</button></td>
+                    </tr>`);
+                    }
+                },
+                "json"
+            );
+            $("#datas").on("click", "#deleteButton", function () {
+                $(this).parent().parent().remove();
+            });
+            $("#datas").on("click", "#editButton", function () {
+                console.log($(this).parent().parent().children().get());
+            });
+            $("#updateButton").on("click", function () {
+                let studentID = $("#studentId").val();
+                let studentName = $("#studentName").val();
+                let studentEmail = $("#studentEmail").val();
+                let studentClass = $("#grade").val();
+                console.log(studentID);
+                array.unshift({
+                    ID: studentID,
+                    Name: studentName,
+                    Email: studentEmail,
+                    Class: studentClass,
+                });
+                console.log(array);
+            });
+            function loadData() {
+                for (getData of array) {
+                    $("#datas").append(`<tr>
+                        <td id="studentID">${getData.ID}</td>
+                        <td id="studentName">${getData.Name}</td>
+                        <td id="studentEmail">${getData.Email}</td>
+                        <td><button id="editButton" style="margin-right:10px">Edit</button><button id="deleteButton">Delete</button></td>
+                    </tr>`);
+                }
+            }
         </script>
     </body>
 </html>
