@@ -1,158 +1,285 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Student Management System</title>
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-            crossorigin="anonymous"
-        />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <style type="text/css">
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            .class-detail {
+                border: 1px solid black;
+            }
+           
+            .studentForm {
+                border: 1px solid black;
+                padding: 15px;
+            }
+            .studentInfo {
+                padding: 15px;
+                border: 1px solid black;
+            }
+            h2 {
+                font-size: 20px;
+                color: #111;
+            }
+            #class-list li{
+                color: #000;
+                cursor: pointer;
+            }
+            .EditBtn {
+                display: none;
+            }
+        </style>
     </head>
     <body>
-        <h1 class="m-2">Student Management System</h1>
-        <div class="conatainer">
-            <div class="row justify-content-around">
-                <div class="col-2" style="border: 1px solid black">
-                    <h1>Class List</h1>
-                    <ul>
-                        <li id="class1">Lớp 1</li>
-                        <li id="class2">Lớp 2</li>
-                    </ul>
-                </div>
-                <div class="col-9 p-0" style="border: 1px solid black">
-                    <h5 style="border: 1px solid gray; padding: 10px">
-                        Edit student's information
-                    </h5>
-                    <div style="display: flex">
-                        <form style="padding: 10px">
-                            <div style="text-align: center; display: flex">
-                                <input
-                                    type="text"
-                                    id="studentId"
-                                    value=""
-                                    placeholder="ID"
-                                    style="margin-right: 20px; width: 170px"
-                                />
-                                <input
-                                    type="text"
-                                    id="studentName"
-                                    value=""
-                                    placeholder="Full Name"
-                                    style="margin-right: 20px; width: 200px"
-                                />
-                                <input
-                                    type="text"
-                                    id="studentEmail"
-                                    value=""
-                                    placeholder="Email"
-                                    style="margin-right: 20px; width: 170px"
-                                />
-                                <select
-                                    name="grade"
-                                    id="grade"
-                                    style="margin-right: 20px; width: 100px"
-                                >
-                                    <option unselected>Class...</option>
-                                    <option value="Class 1">Class 1</option>
-                                    <option value="Class 2">Class 2</option>
-                                    <option value="Class 3">Class 3</option>
-                                </select>
-                            </div>
-                        </form>
-                        <button class="btn btn-primary" id="updateButton">
-                            Update
-                        </button>
-                    </div>
-                    <div style="padding: 20px">
-                        <div>Student List</div>
-                        <table>
-                            <colgroup>
-                                <col style="width: 10%" />
-                                <col style="width: 40%" />
-                                <col style="width: 10%" />
-                                <col style="width: 30%" />
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Full Name</th>
-                                    <th>Student ID</th>
-                                    <th>Function</th>
-                                </tr>
-                            </thead>
-                            <tbody id="datas"></tbody>
-                        </table>
-                    </div>
-                </div>
+        <h1>Student Management System</h1>
+        <div class="row">
+            <div class="col-4 class-detail">
+                
+                <h2>Class List</h2>
+                <ul id="class-list">
+                    <li></li>
+                </ul>
             </div>
+            <div class="col-8 studentForm">
+                <div class="studentInfo">
+                    <h2>Edit student's infomation</h2>
+                    <input type="text" name="ID" id="ID" class="ID">
+                    <input type="text" name="Name" id="Name" class="Name">
+                    <input type="text" name="Mail" id="Mail" id="Mail">
+                    <select name="classes" class="classes" >
+                            <option value="Class 1" selected>Class 1</option>
+                            <option value="Class 2">Class 2</option>
+                            <option value="Class 3">Class 3</option>
+                            
+                    </select>
+                    <button type="button" class="AddBtn">Add</button>
+                    <button type="button" class="EditBtn">Update</button>
+
+                    <button type="button" class="SearchBtn" >Search</button>
+                    
+                </div>
+                <div  class="studentList">
+                    <h2>Student List</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th >#</th>
+                                <th >Full Name</th>
+                                <th >Id</th>
+                                <th >Function</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+
+                        </tbody>
+                        
+                        
+                        
+                        
+                    </table>
+                </div>
+                
+            </div>
+            
         </div>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://code.jquery.com/jquery-3.7.1.js"
-            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-            crossorigin="anonymous"
-        ></script>
-        <script>
-            let array = [];
-            jQuery.get(
-                "http://139.180.213.49/getdata-student.php?Type=Student",
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            let classList ;
+            let smallList = [];
+            $.get(
+                "http://139.180.213.49/getdata-student.php",
                 {
-                    ID: "",
-                    Name: "",
-                    Email: "",
-                    Class: "",
+                    "Type" : "Class"
                 },
-                function (data) {
-                    array.push(data);
-                    console.log(data);
-                    for (getData of data) {
-                        $("#datas").append(`<tr>
-                        <td id="studentID">${getData.ID}</td>
-                        <td id="studentName">${getData.Name}</td>
-                        <td id="studentEmail">${getData.Email}</td>
-                        <td><button id="editButton" style="margin-right:10px">Edit</button><button id="deleteButton">Delete</button></td>
-                    </tr>`);
-                    }
+                function(classData) {
+                    console.log(classData);
+                    classList=classData;
+                    showclassList(classList);
+                    
                 },
                 "json"
             );
-            $("#datas").on("click", "#deleteButton", function () {
-                $(this).parent().parent().remove();
+            
+            function showclassList(list) {
+                let str = "";
+                let num = 0;
+                for (const item of list) {
+                    str +=  `<li  class="className"><span>${item}</span></li>`
+                    num++;
+                }
+                
+                document.getElementById("class-list").innerHTML = str; 
+            }
+            
+            $("#class-list").on("click", ".className",function() {
+
+                $(this).find("span").text()
+                console.log($(this).find("span").text())
+                searchByClass($(this).find("span").text())
+                
+            } ); 
+            function searchByClass(className){
+                smallList=[];
+                for (let item of studentList) {
+                    if(item.Class == className) {
+                        
+                        smallList.push(item);
+                        
+                    } 
+                    
+                    
+                }
+                showStudentList(smallList,num)
+            }
+            let num = 0 ;
+            let studentList ;
+            $.get(
+                "http://139.180.213.49/getdata-student.php",
+                {
+                    "Type" : "Student"
+                },
+                function(studentData) {
+                    console.log(studentData);
+                    studentList=studentData;
+                    studentList.sort( compare );
+                    showStudentList(studentList,num);
+                },
+                "json"
+            );
+            function sortList(){
+                studentList.sortList
+            }
+             
+            function showStudentList(list,num) {
+                let str = "";
+                for (let index = 0; index < list.length; index++) {
+                    num = index;
+                    str +=  `<tr>
+                            <td class="c${num}1">${num}</td>
+                            <td class="c${num}2">${list[index].Name}</td>
+                            <td class="id">${list[index].ID}</td>
+                            <td><button id="edit">Edit</button>
+                            <button id="del">Delete</button></td>
+                        </tr>`
+
+                }
+                document.getElementById("tbody").innerHTML = str; 
+            }    
+            
+            function addStudent() {
+                studentList.unshift({ "ID" : $("#ID").val(), "Name" : $("#Name").val(), "Email" :  $("#Name").val(), "Class" : $(".classes").val() })
+            }
+            $(".AddBtn").on("click",function(){
+                addStudent();
+                showStudentList(studentList,num);
+            })
+
+            $("table").on("click", "#del" , function() {
+                
+                
+                
+                $(this).parents("tr").remove();
+                console.log($(this).parents("tr").children("td").hasClass("id"))            
+                console.log($(this).parents("tr").children(".id").text()) 
+                deleteByID($(this).parents("tr").children(".id").text()) 
+    
             });
-            $("#datas").on("click", "#editButton", function () {
-                console.log($(this).parent().parent().children().get());
-            });
-            $("#updateButton").on("click", function () {
-                let studentID = $("#studentId").val();
-                let studentName = $("#studentName").val();
-                let studentEmail = $("#studentEmail").val();
-                let studentClass = $("#grade").val();
-                console.log(studentID);
-                array.unshift({
-                    ID: studentID,
-                    Name: studentName,
-                    Email: studentEmail,
-                    Class: studentClass,
-                });
-                console.log(array);
-            });
-            function loadData() {
-                for (getData of array) {
-                    $("#datas").append(`<tr>
-                        <td id="studentID">${getData.ID}</td>
-                        <td id="studentName">${getData.Name}</td>
-                        <td id="studentEmail">${getData.Email}</td>
-                        <td><button id="editButton" style="margin-right:10px">Edit</button><button id="deleteButton">Delete</button></td>
-                    </tr>`);
+
+
+            function deleteByID(id) {
+                for (let index = 0; index < studentList.length; index++) {
+                    if(studentList[index].ID == id) {
+                        studentList.splice(index,1);
+                        showStudentList(studentList,num);
+                        break;
+                    }
+                    
                 }
             }
+
+            $("table").on("click", "#edit" , function() {
+                 
+
+                getDetail($(this).parents("tr").children(".id").text()); 
+                console.log(infolist,$(this).parents("tr").children(".id").text());
+                
+                $("#ID").val(`${infolist.ID}`);
+                $("#Name").val(`${infolist.Name}`);
+                $("#Mail").val(`${infolist.Email}`);
+                $(".classes").val(`${infolist.Class}`);
+                
+                $(".AddBtn").hide()
+                $(".EditBtn").show()
+
+                $(".EditBtn").on("click",function(){
+                    editByID($("#ID").val(),$("#Name").val(),$("#Mail").val(),$(".classes").val());
+                    $(".AddBtn").show()
+                    $(".EditBtn").hide()
+                })
+
+
+
+    
+            });
+            let infolist=[];
+            function getDetail(id) {
+                for (let index = 0; index < studentList.length; index++) {
+                    if(studentList[index].ID == id) {
+                        infolist = studentList[index]; 
+                        break;
+                    }
+                    
+                }
+            }
+            function editByID(id,name,email,className) {
+                for (let index = 0; index < studentList.length; index++) {
+                    if(studentList[index].ID == id) {
+                        studentList[index].Name = name;
+                        studentList[index].Class = className;
+                        studentList[index].Email = email ;
+
+                        showStudentList(studentList,num);
+                        break;
+                        
+                    }
+                    
+                }
+            }
+
+            function compare( a, b ) {
+                if ( a.Name < b.Name ){
+                    return -1;
+                }
+                if ( a.Name > b.Name ){
+                    return 1;
+                }
+                return 0;
+            }
+
+            function  searchByName(name) {
+                    
+                    let src=[];
+                    for ( let item of studentList) {
+                        if(item.Name.toLowerCase().indexOf(name.toLowerCase()) != -1) {
+                            src.push(item);
+                            console.log(item.Name)
+                        }
+
+                    }
+                    showStudentList(src, num)
+
+            
+            }
+        $(".SearchBtn").on("click",function(){
+                searchByName($("#Name").val())
+            })
         </script>
     </body>
 </html>
