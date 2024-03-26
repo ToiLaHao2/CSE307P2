@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <title>Product Management System</title>
+
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+
+        <style type="text/css">
+            header {
+                text-align: center;
+                background-color: #111;
+                color: #fff;
+                font-size: 20px;
+                font-weight: bold;
+                padding: 20px;
+            }
+            .left-side {
+                background-color: #eee;
+                padding-top: 15px;
+            }
+            .BrandList li {
+                cursor: pointer;
+            }
+
+            main {
+                padding: 10px;
+            }
+            .card-header {
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+            .Title,
+            label {
+                font-weight: bold;
+            }
+            .NewProduct {
+                margin-bottom: 40px;
+                padding-bottom: 20px;
+            }
+            #Submit {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .GroupElements {
+                padding: 0px 10px;
+            }
+            .group-List img {
+                max-width: 100px;
+                height: auto;
+            }
+
+            .group-List .row {
+                margin-top: 20px;
+            }
+            .product-image {
+                width: 90px;
+            }
+            footer {
+                padding: 20px 0px;
+                background: #111;
+                text-align: center;
+                font-weight: bold;
+                color: #fff;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>PRODUCT MANAGEMENT SYSTEM</header>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2 left-side">
+                    <h2>Brand List</h2>
+                    <ul id="brands"></ul>
+                </div>
+
+                <div class="col-10">
+                    <main class="main-content">
+                        <section class="NewProduct">
+                            <div class="card-header">Add a new product</div>
+
+                            <div class="GroupElements">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label
+                                                class="col-sm-2 col-form-label"
+                                                for="productName"
+                                                >Product Name</label
+                                            >
+                                            <div class="col-sm-10">
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    id="productName"
+                                                    value=""
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label
+                                                class="col-sm-2 col-form-label"
+                                                for="price"
+                                                >Price</label
+                                            >
+                                            <div class="col-sm-10">
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    id="price"
+                                                    value=""
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label
+                                                class="col-sm-2 col-form-label"
+                                                for="quantity"
+                                                >Quantity</label
+                                            >
+                                            <div class="col-sm-10">
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    id="quantity"
+                                                    value=""
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label
+                                                class="col-sm-2 col-form-label"
+                                                for="imageLink"
+                                                >Image Link</label
+                                            >
+                                            <div class="col-sm-10">
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    id="imageLink"
+                                                    value=""
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label
+                                                class="col-sm-2 col-form-label"
+                                                for="description"
+                                                >Description</label
+                                            >
+                                            <div class="col-sm-10">
+                                                <textarea
+                                                    class="form-control"
+                                                    rows="3"
+                                                    id="description"
+                                                    value=""
+                                                ></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label
+                                                class="col-sm-2 col-form-label"
+                                                for="brand"
+                                                >Brand</label
+                                            >
+                                            <div class="col-sm-10">
+                                                <select
+                                                    class="form-control"
+                                                    id="brandName"
+                                                ></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="offset-md-1 col-sm-11">
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            id="addButton"
+                                        >
+                                            Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- End of the form section -->
+
+                        <section class="group-Title">
+                            <div class="card-header">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <h3 class="student-list">
+                                            PRODUCT LIST
+                                        </h3>
+                                    </div>
+                                    <div class="col-3">
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="Product Name"
+                                            id="searchName"
+                                        />
+                                    </div>
+                                    <div class="col-1">
+                                        <button
+                                            class="form-control"
+                                            type="button"
+                                            id="search"
+                                        >
+                                            Search
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- End of the product title group -->
+                        <table cellpadding="5px">
+                            <colgroup>
+                                <col style="width: 6%" />
+                                <col style="width: 6%" />
+                                <col style="width: 20%" />
+                                <col style="width: 20%" />
+                                <col style="width: 8%" />
+                                <col style="width: 35%" />
+                                <col style="width: 5%" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Image</th>
+                                    <th>Product Name</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Description</th>
+                                    <th>Function</th>
+                                </tr>
+                            </thead>
+                            <tbody id="productList"></tbody>
+                        </table>
+                    </main>
+                </div>
+            </div>
+        </div>
+        <footer>Product Management System - 2022</footer>
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            let products = [];
+            let brands = [];
+            $.get(
+                "http://139.180.213.49/getProducts.php",
+                {
+                    GetProducts: "All",
+                },
+                function (data) {
+                    products = data;
+                    products.sort(function (a, b) {
+                        return b.Quantity - a.Quantity;
+                    });
+                    showProducts(products);
+                },
+                "json"
+            );
+            $.get(
+                "http://139.180.213.49/getProducts.php",
+                {
+                    GetProducts: "Brand",
+                },
+                function (data) {
+                    brands = data;
+                    for (let brand of brands) {
+                        $("#brands").append(
+                            `<li id="brandChoice" value="Apple">${brand}</li>`
+                        );
+                        $("#brandName").append(
+                            `<option value="${brand}">${brand}</option>`
+                        );
+                    }
+                },
+                "json"
+            );
+            function showProducts(lists) {
+                removeAllProducts();
+                for (let product of lists) {
+                    console.log(product);
+                    $("#productList").append(`
+                            <tr id="product">
+                                <td>${product.Code}</td>
+                                <td><img src="${product.Image_URL}" class="product-image"></td>
+                                <td>${product.Name}</td>
+                                <td>${product.Price}</td>
+                                <td>${product.Quantity}</td>
+                                <td>${product.Description}</td>
+                                <td><button id="deleteProduct">Delete</button></td>
+                            </tr>
+                        `);
+                }
+            }
+            $("#productList").on("click", "#deleteProduct", function () {
+                $(this).parent().parent().remove();
+            });
+            function removeAllProducts() {
+                $("#productList").children().remove();
+            }
+            $("#addButton").on("click", function () {
+                let pCode = "";
+                let pName = $("#productName").val();
+                let pPrice = $("#price").val();
+                let pQuantity = $("#quantity").val();
+                let pImageLink = $("#imageLink").val();
+                let pDescription = $("#description").val();
+                let pBrandName = $("#brandName").val();
+                if (pBrandName == "Apple") {
+                    pCode = "APE";
+                } else {
+                    pCode = "SGN";
+                }
+                if (pName != "") {
+                    products.push({
+                        pCode,
+                        pName,
+                        pPrice,
+                        pQuantity,
+                        pImageLink,
+                        pDescription,
+                        pBrandName,
+                    });
+                    $("#productList").append(`
+                            <tr id="product">
+                                <td>${pCode}</td>
+                                <td><img src="${pImageLink}" class="product-image"></td>
+                                <td>${pName}</td>
+                                <td>${pPrice}</td>
+                                <td>${pQuantity}</td>
+                                <td>${pDescription}</td>
+                                <td><button id="deleteProduct">Delete</button></td>
+                            </tr>
+                        `);
+                }
+            });
+            $("#brands").on("click", "#brandChoice", function () {
+                let value = $(this).text();
+                console.log(value);
+                smallList = [];
+                for (let product of products) {
+                    if (product.CateCode == value) {
+                        smallList.push(product);
+                    }
+                }
+                showProducts(smallList);
+            });
+            $("search").on("click", function () {
+                let searchName = $("#searchName").val();
+                smallList = [];
+                for (let product of products) {
+                    if (product.Name == searchName) {
+                        smallList.push(product);
+                    }
+                }
+                showProducts(smallList);
+            });
+        </script>
+    </body>
+</html>

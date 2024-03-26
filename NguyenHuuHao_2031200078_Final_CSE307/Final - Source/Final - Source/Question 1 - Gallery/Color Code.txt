@@ -1,0 +1,3 @@
+Question 1:
+	Blue: rgb(24, 158, 255)
+	Grey: rgb(204, 204, 204)
